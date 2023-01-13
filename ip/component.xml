@@ -585,7 +585,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>275bd909</spirit:value>
+            <spirit:value>cba35c80</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -604,7 +604,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>e7c3f2ce</spirit:value>
+            <spirit:value>5a48ea63</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -623,7 +623,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>0cb93c9d</spirit:value>
+            <spirit:value>9f65afc0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -642,7 +642,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d6376646</spirit:value>
+            <spirit:value>cd93c48d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1044,7 +1044,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">8</spirit:left>
+            <spirit:left spirit:format="long">10</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1127,6 +1127,10 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/ip/FAcc.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/ip/nn_inference_ap_fmul_2_max_dsp_32.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -1140,7 +1144,15 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/verilog/nn_inference_applySingleKernel.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/verilog/nn_inference_AXI_CPU_s_axi.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/nn_inference_facc_32ns_32ns_1ns_32_3_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1156,83 +1168,75 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_fp_input_img.v</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_fully_connected_in.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer1_weights.v</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_img.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer1_weights_rom.dat</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_1_layer8_weights.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_1_layer8_weights_rom.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer2_weights.v</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer2_weights_rom.dat</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_2_layer9_weights.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_2_layer9_weights_rom.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer3_weights.v</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer3_weights_rom.dat</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_3_layer10_weights.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_3_layer10_weights_rom.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer4_weights.v</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_layer7_weights.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer4_weights_rom.dat</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_layer7_weights_rom.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer5_weights.v</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_maxPooling.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer5_weights_rom.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer6_weights_0.v</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_mul_mul_11s_6ns_11_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer6_weights_0_rom.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer6_weights_1.v</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_out_conv.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer6_weights_1_rom.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_temp_output2_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_temp_output3_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_temp_output4_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_temp_output5_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_temp_output_0.v</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_urem_6ns_6ns_5_10_seq_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1253,7 +1257,17 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
+        <spirit:name>hdl/verilog/nn_inference_applySingleKernel.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/verilog/nn_inference_AXI_CPU_s_axi.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/nn_inference_facc_32ns_32ns_1ns_32_3_no_dsp_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1273,95 +1287,88 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_fp_input_img.v</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_fully_connected_in.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer1_weights.v</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_img.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer1_weights_rom.dat</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_1_layer8_weights.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_1_layer8_weights_rom.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer2_weights.v</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer2_weights_rom.dat</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_2_layer9_weights.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_2_layer9_weights_rom.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer3_weights.v</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer3_weights_rom.dat</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_3_layer10_weights.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_3_layer10_weights_rom.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer4_weights.v</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_layer7_weights.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer4_weights_rom.dat</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_mat_mul_layer7_weights_rom.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer5_weights.v</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_maxPooling.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer5_weights_rom.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer6_weights_0.v</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_mul_mul_11s_6ns_11_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer6_weights_0_rom.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer6_weights_1.v</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_out_conv.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_layer6_weights_1_rom.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_temp_output2_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_temp_output3_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_temp_output4_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_temp_output5_0.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/nn_inference_temp_output_0.v</spirit:name>
+        <spirit:name>hdl/verilog/nn_inference_urem_6ns_6ns_5_10_seq_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1372,6 +1379,11 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/ip/nn_inference_ap_fcmp_0_no_dsp_32.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/ip/FAcc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1403,6 +1415,10 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/ip/FAcc.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/ip/nn_inference_ap_fmul_2_max_dsp_32.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -1416,7 +1432,15 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/vhdl/nn_inference_applySingleKernel.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/vhdl/nn_inference_AXI_CPU_s_axi.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/nn_inference_facc_32ns_32ns_1ns_32_3_no_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1432,61 +1456,65 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_fp_input_img.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_fully_connected_in.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_layer1_weights.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_img.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_layer2_weights.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_mat_mul.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_layer3_weights.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_mat_mul_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_layer4_weights.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_mat_mul_1_layer8_weights.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_layer5_weights.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_mat_mul_2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_layer6_weights_0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_mat_mul_2_layer9_weights.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_layer6_weights_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_mat_mul_3.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_temp_output2_0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_mat_mul_3_layer10_weights.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_temp_output3_0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_mat_mul_layer7_weights.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_temp_output4_0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_maxPooling.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_temp_output5_0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_mul_mul_11s_6ns_11_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_temp_output_0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_out_conv.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/nn_inference_urem_6ns_6ns_5_10_seq_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/nn_inference.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_d2c58171</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_ce226790</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1502,7 +1530,17 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
+        <spirit:name>hdl/vhdl/nn_inference_applySingleKernel.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/vhdl/nn_inference_AXI_CPU_s_axi.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/nn_inference_facc_32ns_32ns_1ns_32_3_no_dsp_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1522,67 +1560,72 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_fp_input_img.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_fully_connected_in.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_layer1_weights.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_img.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_layer2_weights.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_mat_mul.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_layer3_weights.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_mat_mul_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_layer4_weights.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_mat_mul_1_layer8_weights.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_layer5_weights.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_mat_mul_2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_layer6_weights_0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_mat_mul_2_layer9_weights.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_layer6_weights_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_mat_mul_3.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_temp_output2_0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_mat_mul_3_layer10_weights.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_temp_output3_0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_mat_mul_layer7_weights.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_temp_output4_0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_maxPooling.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_temp_output5_0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_mul_mul_11s_6ns_11_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/nn_inference_temp_output_0.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/nn_inference_out_conv.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/nn_inference_urem_6ns_6ns_5_10_seq_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1593,6 +1636,11 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/ip/nn_inference_ap_fcmp_0_no_dsp_32.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/ip/FAcc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1704,7 +1752,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">241273</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">undef</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
@@ -1721,8 +1769,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Nn_inference</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2112854420</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2023-01-12T09:20:35Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2112856639</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2023-01-13T22:20:10Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -1732,10 +1780,10 @@
       <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="939a9ed4"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="69cf31b4"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8ded9066"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="20a9e8b2"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="e9296d58"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="4ecd80f8"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="95dfeefc"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="32940008"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="ca5cbd8f"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

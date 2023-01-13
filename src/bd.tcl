@@ -287,7 +287,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.n_addr_bits {9} \
+   CONFIG.n_addr_bits {11} \
  ] $bram_addr_mapper_0
 
   # Create instance: bram_addr_mapper_1, and set properties
