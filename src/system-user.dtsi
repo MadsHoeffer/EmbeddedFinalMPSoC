@@ -6,4 +6,14 @@
 };
 
 // Custom IP map to UIO
+&axi_bram_ctrl_0 {
+	compatible = "generic-uio";
+};
 
+&axi_bram_ctrl_1 {
+	compatible = "generic-uio";
+};
+
+&nn_inference_0 {
+	compatible = "generic-uio";
+};
