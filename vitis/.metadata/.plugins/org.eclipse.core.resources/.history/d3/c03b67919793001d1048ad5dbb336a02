@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "sleep.h"
+#include "xbram.h"
+#include "xnn_inference.h"
+#include "xparameters.h"
+#include "data.h"
+#include "printf.h"
+#define BRAM0(A) ((volatile u32*)px_config0->MemBaseAddress)[A]
+#define BRAM1(A) ((volatile u32*)px_config1->MemBaseAddress)[A]
+
+XBram x_bram0;
+XBram_Config *px_config0;
+
+XBram x_bram1;
+XBram_Config *px_config1;
+XNn_inference nn;
+XNn_inference_Config *nn_config;
+int main()
+{
+    init_platform();
+    print("Platform initialized\n\r");
+
+    xil_printf("Platform initialized \r\n");
+
+	px_config0 = XBram_LookupConfig(XPAR_BRAM_0_DEVICE_ID);
+	int x_status = XBram_CfgInitialize(&x_bram0, px_config0, px_config0->CtrlBaseAddress);
+
+	px_config1 = XBram_LookupConfig(XPAR_BRAM_1_DEVICE_ID);
+	int x_status1 = XBram_CfgInitialize(&x_bram1, px_config1, px_config1->CtrlBaseAddress);
+
+	xil_printf("BRAM 1 & 2 initialized \r\n");
+
+	nn_config = XNn_inference_LookupConfig(XPAR_NN_INFERENCE_0_DEVICE_ID);
+	x_status = XNn_inference_CfgInitialize(&nn,nn_config);
+	x_status = XNn_inference_Initialize(&nn,XPAR_NN_INFERENCE_0_DEVICE_ID);
+	print("Successfully initialized neural network kernel\r\n");
+
+	while(!XNn_inference_IsIdle(&nn));
+	for(int i = 0; i<n_inputs;i++){
+		BRAM0(i) = *(u32 *)(&input_img1[i]);
+	}
+	print("Data written to BRAM0\r\n");
+	if(XNn_inference_IsReady(&nn)){
+		XNn_inference_Start(&nn);
+	}
+	while(!XNn_inference_IsIdle(&nn));
+	for(int i = 0; i<2;i++){
+		u32 val = BRAM1(i);
+		printf("Output of NN: %f\r\n",*((float*)&val));
+	}
+
+	print("Successfully ran NN test application");
+    cleanup_platform();
+    return 0;
+}

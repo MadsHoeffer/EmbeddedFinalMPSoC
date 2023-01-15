@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="matmul.hpp" path="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/src/matmul.hpp"/>
+    <originFiles name="matmul.cpp" path="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/src/matmul.cpp"/>
+    <originFiles name="kernels.hpp" path="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/src/kernels.hpp"/>
+  </source>
+  <testbench>
+    <originFiles name="matmul_tb.cpp" path="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/src/matmul_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

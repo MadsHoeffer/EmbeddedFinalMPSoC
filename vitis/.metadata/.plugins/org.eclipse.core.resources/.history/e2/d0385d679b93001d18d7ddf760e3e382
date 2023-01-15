@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="NeuralNetworkVitis" location="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/vitis/NeuralNetworkVitis" platform="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/vitis/u96v2_sbc_mp4d_wrapper/export/u96v2_sbc_mp4d_wrapper/u96v2_sbc_mp4d_wrapper.xpfm" platformUID="sdu.dk/diii:u96v2_sbc_mp4d:u96v2_sbc_mp4d:1.0(custom)" systemProject="NeuralNetworkVitis_system" sysConfig="u96v2_sbc_mp4d_wrapper" runtime="cpp" cpu="standalone_psu_cortexa53_0" cpuInstance="psu_cortexa53_0" os="standalone" mssSignature="07809a7e6eb8efe1691e7a2101272ff8">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.1666476964">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.1619186238" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

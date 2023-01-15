@@ -1,0 +1,2030 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1673691563300">
+  <ports id="1" name="input_r" type="PortType" coreName="RAM" coreId="716155616" bitwidth="32" iftype="IfTypeRegister" arraysize="10">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="2" name="output_r" type="PortType" coreName="RAM" coreId="1" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="1620">
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <edges id="154" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="155" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="156" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="159" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="160" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="163" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="164" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="165" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="166" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@ports.1"/>
+  <edges id="169" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="170" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="171" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="172" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="175" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="178" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.3/@node_objs.4"/>
+  <edges id="181" source_obj="//@blocks.3/@node_objs.4" sink_obj="//@blocks.3/@node_objs.5"/>
+  <edges id="184" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.3/@node_objs.6"/>
+  <edges id="187" source_obj="//@blocks.3/@node_objs.6" sink_obj="//@blocks.3/@node_objs.7"/>
+  <edges id="188" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@blocks.3/@node_objs.8"/>
+  <edges id="189" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="190" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="193" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="194" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="195" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="198" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="199" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="202" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="205" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="206" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="207" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="208" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="209" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="211" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="213" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="214" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="217" source_obj="//@blocks.2/@node_objs.4" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="218" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="219" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="220" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="221" source_obj="//@blocks.2/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="222" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="223" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="224" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="225" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="226" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="227" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="229" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="230" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="231" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="233" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="234" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="235" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="236" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="237" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="241" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="242" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="243" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="244" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@ports.1"/>
+  <edges id="246" source_obj="//@blocks.3/@node_objs.3" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="247" source_obj="//@regions.1/@basic_blocks.0/@node_objs.1" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="248" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="249" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.4/@node_objs.2"/>
+  <edges id="252" source_obj="//@blocks.4/@node_objs.2" sink_obj="//@blocks.4/@node_objs.3"/>
+  <edges id="254" source_obj="//@blocks.4/@node_objs.2" sink_obj="//@blocks.4/@node_objs.4"/>
+  <edges id="256" source_obj="//@blocks.4/@node_objs.4" sink_obj="//@blocks.4/@node_objs.5"/>
+  <edges id="258" source_obj="//@blocks.4/@node_objs.2" sink_obj="//@blocks.4/@node_objs.6"/>
+  <edges id="260" source_obj="//@blocks.4/@node_objs.6" sink_obj="//@blocks.4/@node_objs.7"/>
+  <edges id="261" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.0" sink_obj="//@blocks.4/@node_objs.8"/>
+  <edges id="262" source_obj="//@regions.1/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="263" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="265" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0"/>
+  <edges id="266" source_obj="//@regions.1/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="267" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="269" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.1"/>
+  <edges id="270" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.2"/>
+  <edges id="272" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
+  <edges id="274" source_obj="//@regions.1/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.4"/>
+  <edges id="275" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.4"/>
+  <edges id="276" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.4"/>
+  <edges id="277" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.0"/>
+  <edges id="278" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.1"/>
+  <edges id="279" source_obj="//@blocks.3/@node_objs.7" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.2"/>
+  <edges id="280" source_obj="//@regions.1/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.2"/>
+  <edges id="281" source_obj="//@regions.1/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.3"/>
+  <edges id="282" source_obj="//@regions.1/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.4"/>
+  <edges id="283" source_obj="//@blocks.3/@node_objs.5" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.4"/>
+  <edges id="284" source_obj="//@regions.1/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.5"/>
+  <edges id="285" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.6"/>
+  <edges id="287" source_obj="//@regions.1/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.6"/>
+  <edges id="288" source_obj="//@regions.1/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.7"/>
+  <edges id="289" source_obj="//@ports.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.8"/>
+  <edges id="291" source_obj="//@regions.1/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.8"/>
+  <edges id="292" source_obj="//@regions.1/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.9"/>
+  <edges id="293" source_obj="//@regions.1/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.10"/>
+  <edges id="294" source_obj="//@regions.1/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.10"/>
+  <edges id="295" source_obj="//@regions.1/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.11"/>
+  <edges id="298" source_obj="//@regions.1/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.12"/>
+  <edges id="299" source_obj="//@regions.1/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.12"/>
+  <edges id="300" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.13"/>
+  <edges id="301" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@ports.1"/>
+  <edges id="303" source_obj="//@blocks.4/@node_objs.3" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="304" source_obj="//@regions.2/@basic_blocks.0/@node_objs.1" sink_obj="//@blocks.5/@node_objs.1"/>
+  <edges id="305" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.5/@node_objs.1"/>
+  <edges id="306" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="309" source_obj="//@blocks.5/@node_objs.2" sink_obj="//@blocks.5/@node_objs.3"/>
+  <edges id="311" source_obj="//@blocks.5/@node_objs.2" sink_obj="//@blocks.5/@node_objs.4"/>
+  <edges id="313" source_obj="//@blocks.5/@node_objs.4" sink_obj="//@blocks.5/@node_objs.5"/>
+  <edges id="315" source_obj="//@blocks.5/@node_objs.2" sink_obj="//@blocks.5/@node_objs.6"/>
+  <edges id="317" source_obj="//@blocks.5/@node_objs.6" sink_obj="//@blocks.5/@node_objs.7"/>
+  <edges id="318" edge_type="CtrlEdge" source_obj="//@regions.3/@basic_blocks.0" sink_obj="//@blocks.5/@node_objs.8"/>
+  <edges id="319" source_obj="//@regions.2/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="320" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.1" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="322" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.0"/>
+  <edges id="323" source_obj="//@regions.2/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="324" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.1" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="326" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.1"/>
+  <edges id="327" source_obj="//@regions.2/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.2"/>
+  <edges id="329" source_obj="//@regions.2/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.3"/>
+  <edges id="331" source_obj="//@regions.2/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.4"/>
+  <edges id="332" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.1" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.4"/>
+  <edges id="333" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@regions.2/@basic_blocks.0/@node_objs.4"/>
+  <edges id="334" source_obj="//@regions.2/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.0"/>
+  <edges id="335" source_obj="//@regions.2/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.1"/>
+  <edges id="336" source_obj="//@blocks.4/@node_objs.7" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.2"/>
+  <edges id="337" source_obj="//@regions.2/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.2"/>
+  <edges id="338" source_obj="//@regions.2/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.3"/>
+  <edges id="339" source_obj="//@regions.2/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.4"/>
+  <edges id="340" source_obj="//@blocks.4/@node_objs.5" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.4"/>
+  <edges id="341" source_obj="//@regions.2/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.5"/>
+  <edges id="342" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.6"/>
+  <edges id="344" source_obj="//@regions.2/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.6"/>
+  <edges id="345" source_obj="//@regions.2/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.7"/>
+  <edges id="346" source_obj="//@ports.0" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.8"/>
+  <edges id="348" source_obj="//@regions.2/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.8"/>
+  <edges id="349" source_obj="//@regions.2/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.9"/>
+  <edges id="350" source_obj="//@regions.2/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.10"/>
+  <edges id="351" source_obj="//@regions.2/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.10"/>
+  <edges id="352" source_obj="//@regions.2/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.11"/>
+  <edges id="355" source_obj="//@regions.2/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.12"/>
+  <edges id="356" source_obj="//@regions.2/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.12"/>
+  <edges id="357" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.0" sink_obj="//@regions.2/@basic_blocks.1/@node_objs.13"/>
+  <edges id="358" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="361" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@ports.1"/>
+  <edges id="363" source_obj="//@blocks.5/@node_objs.3" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="364" source_obj="//@regions.3/@basic_blocks.0/@node_objs.1" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="365" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="366" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="367" source_obj="//@regions.3/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.3/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="368" edge_type="CtrlEdge" source_obj="//@regions.3/@basic_blocks.1" sink_obj="//@regions.3/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="370" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@regions.3/@basic_blocks.0/@node_objs.0"/>
+  <edges id="371" source_obj="//@regions.3/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.3/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="372" edge_type="CtrlEdge" source_obj="//@regions.3/@basic_blocks.1" sink_obj="//@regions.3/@basic_blocks.0/@node_objs.1" is_back_edge="1"/>
+  <edges id="374" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@regions.3/@basic_blocks.0/@node_objs.1"/>
+  <edges id="375" source_obj="//@regions.3/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.3/@basic_blocks.0/@node_objs.2"/>
+  <edges id="377" source_obj="//@regions.3/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.3/@basic_blocks.0/@node_objs.3"/>
+  <edges id="379" source_obj="//@regions.3/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.3/@basic_blocks.0/@node_objs.4"/>
+  <edges id="380" edge_type="CtrlEdge" source_obj="//@regions.3/@basic_blocks.1" sink_obj="//@regions.3/@basic_blocks.0/@node_objs.4"/>
+  <edges id="381" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@regions.3/@basic_blocks.0/@node_objs.4"/>
+  <edges id="382" source_obj="//@regions.3/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.3/@basic_blocks.1/@node_objs.0"/>
+  <edges id="383" source_obj="//@regions.3/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.3/@basic_blocks.1/@node_objs.1"/>
+  <edges id="384" source_obj="//@blocks.5/@node_objs.7" sink_obj="//@regions.3/@basic_blocks.1/@node_objs.2"/>
+  <edges id="385" source_obj="//@regions.3/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.3/@basic_blocks.1/@node_objs.2"/>
+  <edges id="386" source_obj="//@regions.3/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.3/@basic_blocks.1/@node_objs.3"/>
+  <edges id="387" source_obj="//@regions.3/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.3/@basic_blocks.1/@node_objs.4"/>
+  <edges id="388" source_obj="//@blocks.5/@node_objs.5" sink_obj="//@regions.3/@basic_blocks.1/@node_objs.4"/>
+  <edges id="389" source_obj="//@regions.3/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.3/@basic_blocks.1/@node_objs.5"/>
+  <edges id="390" sink_obj="//@regions.3/@basic_blocks.1/@node_objs.6"/>
+  <edges id="392" source_obj="//@regions.3/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.3/@basic_blocks.1/@node_objs.6"/>
+  <edges id="393" source_obj="//@regions.3/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.3/@basic_blocks.1/@node_objs.7"/>
+  <edges id="394" source_obj="//@ports.0" sink_obj="//@regions.3/@basic_blocks.1/@node_objs.8"/>
+  <edges id="396" source_obj="//@regions.3/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.3/@basic_blocks.1/@node_objs.8"/>
+  <edges id="397" source_obj="//@regions.3/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.3/@basic_blocks.1/@node_objs.9"/>
+  <edges id="398" source_obj="//@regions.3/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.3/@basic_blocks.1/@node_objs.10"/>
+  <edges id="399" source_obj="//@regions.3/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.3/@basic_blocks.1/@node_objs.10"/>
+  <edges id="400" source_obj="//@regions.3/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.3/@basic_blocks.1/@node_objs.11"/>
+  <edges id="403" source_obj="//@regions.3/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.3/@basic_blocks.1/@node_objs.12"/>
+  <edges id="404" source_obj="//@regions.3/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.3/@basic_blocks.1/@node_objs.12"/>
+  <edges id="405" edge_type="CtrlEdge" source_obj="//@regions.3/@basic_blocks.0" sink_obj="//@regions.3/@basic_blocks.1/@node_objs.13"/>
+  <edges id="474" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="475" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.7"/>
+  <edges id="476" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="477" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="478" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.3"/>
+  <edges id="479" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="480" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="481" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@regions.1/@basic_blocks.0"/>
+  <edges id="482" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@blocks.4"/>
+  <edges id="483" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@regions.1/@basic_blocks.1"/>
+  <edges id="484" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="485" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@regions.2/@basic_blocks.0"/>
+  <edges id="486" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.0" sink_obj="//@blocks.5"/>
+  <edges id="487" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.0" sink_obj="//@regions.2/@basic_blocks.1"/>
+  <edges id="488" edge_type="CtrlEdge" source_obj="//@regions.2/@basic_blocks.1" sink_obj="//@regions.2/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="489" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@regions.3/@basic_blocks.0"/>
+  <edges id="490" edge_type="CtrlEdge" source_obj="//@regions.3/@basic_blocks.0" sink_obj="//@blocks.6"/>
+  <edges id="491" edge_type="CtrlEdge" source_obj="//@regions.3/@basic_blocks.0" sink_obj="//@regions.3/@basic_blocks.1"/>
+  <edges id="492" edge_type="CtrlEdge" source_obj="//@regions.3/@basic_blocks.1" sink_obj="//@regions.3/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="493" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <blocks id="6" name=".lr.ph7" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_11</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="br_ln66" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." coreId="33686017" contextFuncName="mat_mul" opcode="br" m_display="0" m_delay="0.48" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <controlInputObjs>block_11</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/matmul.cpp">
+      <validLinenumbers>66</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="11" name="block_11" type="BlockType">
+    <controlInputObjs>.lr.ph7</controlInputObjs>
+    <controlInputObjs>._crit_edge.loopexit.3</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>._crit_edge8.loopexit</controlOutputObjs>
+    <controlOutputObjs>.split2.0</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="i_0" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." coreId="167837962" contextFuncName="mat_mul" bitwidth="6" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>shl</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>._crit_edge.loopexit.3</controlInputObjs>
+      <controlInputObjs>.lr.ph7</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="icmp_ln66" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="icmp_ln66_fu_301_p2" opType="icmp" coreId="257" contextFuncName="mat_mul" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.87" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="br_ln66" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." coreId="257" contextFuncName="mat_mul" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>.split2.0</controlInputObjs>
+      <controlInputObjs>._crit_edge8.loopexit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/matmul.cpp">
+      <validLinenumbers>66</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="20" name=".split2.0" type="BlockType">
+    <controlInputObjs>block_11</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_28</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="zext_ln66" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="zext_ln66_fu_307_p1" coreId="132" contextFuncName="mat_mul" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="trunc_ln66" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="trunc_ln66_fu_311_p1" coreId="337" contextFuncName="mat_mul" bitwidth="5" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+      <dataOutputObjs>or</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="p_shl" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="p_shl_fu_315_p3" coreId="49" contextFuncName="mat_mul" bitwidth="8" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="p_shl_cast" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="p_shl_cast_fu_323_p1" coreId="132" contextFuncName="mat_mul" bitwidth="9" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="empty_96" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="empty_96_fu_327_p2" coreId="49" contextFuncName="mat_mul" bitwidth="6" opcode="shl" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="zext_ln70" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="zext_ln70_fu_333_p1" coreId="337" contextFuncName="mat_mul" bitwidth="7" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>shl</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="br_ln70" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." coreId="49" contextFuncName="mat_mul" opcode="br" nodeLabel="1.0" m_display="0" m_delay="0.48" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <controlInputObjs>block_28</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/matmul.cpp">
+      <validLinenumbers>66</validLinenumbers>
+      <validLinenumbers>70</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="54" name="._crit_edge.loopexit.0" type="BlockType">
+    <controlInputObjs>block_28</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_62</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="output_addr" lineNumber="74" fileName="../src/matmul.cpp" fileDirectory=".." coreId="719161209" contextFuncName="mat_mul" bitwidth="11" opcode="getelementptr" nodeLabel="10.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="74" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>output_r</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="output_addr_write_ln74" lineNumber="74" fileName="../src/matmul.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="mat_mul" opcode="store" nodeLabel="10.0" m_display="0" m_delay="1.35" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="74" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="or_ln66" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="or_ln66_fu_390_p2" coreId="718528624" contextFuncName="mat_mul" bitwidth="5" opcode="or" nodeLabel="10.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="or_ln66_cast10" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="or_ln66_cast10_fu_395_p1" coreId="718530424" contextFuncName="mat_mul" bitwidth="64" opcode="zext" nodeLabel="10.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="p_shl2" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="p_shl2_fu_399_p3" coreId="49" contextFuncName="mat_mul" bitwidth="8" opcode="bitconcatenate" nodeLabel="10.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="p_shl2_cast" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="p_shl2_cast_fu_407_p1" coreId="718531640" contextFuncName="mat_mul" bitwidth="9" opcode="zext" nodeLabel="10.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="p_shl3" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="p_shl3_fu_411_p3" coreId="718532880" contextFuncName="mat_mul" bitwidth="6" opcode="bitconcatenate" nodeLabel="10.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="zext_ln70_1" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="zext_ln70_1_fu_419_p1" coreId="718533640" contextFuncName="mat_mul" bitwidth="7" opcode="zext" nodeLabel="10.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="br_ln70" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." coreId="718534376" contextFuncName="mat_mul" opcode="br" nodeLabel="10.0" m_display="0" m_delay="0.48" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <controlInputObjs>block_62</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/matmul.cpp">
+      <validLinenumbers>74</validLinenumbers>
+      <validLinenumbers>66</validLinenumbers>
+      <validLinenumbers>70</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="88" name="._crit_edge.loopexit.1" type="BlockType">
+    <controlInputObjs>block_62</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_96</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="output_addr_9" lineNumber="74" fileName="../src/matmul.cpp" fileDirectory=".." coreId="1409286288" contextFuncName="mat_mul" bitwidth="11" opcode="getelementptr" nodeLabel="19.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="74" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>output_r</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="output_addr_9_write_ln74" lineNumber="74" fileName="../src/matmul.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="mat_mul" opcode="store" nodeLabel="19.0" m_display="0" m_delay="1.35" m_topoIndex="61" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="74" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="or_ln66_5" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="or_ln66_5_fu_476_p2" coreId="716180272" contextFuncName="mat_mul" bitwidth="5" opcode="or" nodeLabel="19.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="or_ln66_7_cast12" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="or_ln66_7_cast12_fu_481_p1" coreId="49" contextFuncName="mat_mul" bitwidth="64" opcode="zext" nodeLabel="19.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="p_shl4" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="p_shl4_fu_485_p3" coreId="0" contextFuncName="mat_mul" bitwidth="8" opcode="bitconcatenate" nodeLabel="19.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="p_shl4_cast" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="p_shl4_cast_fu_493_p1" coreId="1" contextFuncName="mat_mul" bitwidth="9" opcode="zext" nodeLabel="19.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="85" name="p_shl5" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="p_shl5_fu_497_p3" coreId="718473488" contextFuncName="mat_mul" bitwidth="6" opcode="bitconcatenate" nodeLabel="19.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="zext_ln70_2" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="zext_ln70_2_fu_505_p1" coreId="718474248" contextFuncName="mat_mul" bitwidth="7" opcode="zext" nodeLabel="19.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="br_ln70" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." coreId="718475024" contextFuncName="mat_mul" opcode="br" nodeLabel="19.0" m_display="0" m_delay="0.48" m_topoIndex="68" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <controlInputObjs>block_96</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/matmul.cpp">
+      <validLinenumbers>74</validLinenumbers>
+      <validLinenumbers>66</validLinenumbers>
+      <validLinenumbers>70</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="122" name="._crit_edge.loopexit.2" type="BlockType">
+    <controlInputObjs>block_96</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_130</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="113" name="output_addr_10" lineNumber="74" fileName="../src/matmul.cpp" fileDirectory=".." coreId="132" contextFuncName="mat_mul" bitwidth="11" opcode="getelementptr" nodeLabel="28.0" m_display="0" m_topoIndex="88" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="74" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>output_r</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="output_addr_10_write_ln74" lineNumber="74" fileName="../src/matmul.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="mat_mul" opcode="store" nodeLabel="28.0" m_display="0" m_delay="1.35" m_topoIndex="89" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="74" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="or_ln66_6" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="or_ln66_6_fu_562_p2" coreId="0" contextFuncName="mat_mul" bitwidth="5" opcode="or" nodeLabel="28.0" m_display="0" m_topoIndex="90" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="116" name="or_ln66_8_cast14" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="or_ln66_8_cast14_fu_567_p1" coreId="712292176" contextFuncName="mat_mul" bitwidth="64" opcode="zext" nodeLabel="28.0" m_display="0" m_topoIndex="91" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="117" name="p_shl6" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="p_shl6_fu_571_p3" coreId="68" contextFuncName="mat_mul" bitwidth="8" opcode="bitconcatenate" nodeLabel="28.0" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="p_shl6_cast" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="p_shl6_cast_fu_579_p1" coreId="0" contextFuncName="mat_mul" bitwidth="9" opcode="zext" nodeLabel="28.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="119" name="p_shl7" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="p_shl7_fu_583_p3" coreId="712295280" contextFuncName="mat_mul" bitwidth="6" opcode="bitconcatenate" nodeLabel="28.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>or</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="zext_ln70_3" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="zext_ln70_3_fu_591_p1" coreId="132" contextFuncName="mat_mul" bitwidth="7" opcode="zext" nodeLabel="28.0" m_display="0" m_topoIndex="95" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="br_ln70" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." coreId="132" contextFuncName="mat_mul" opcode="br" nodeLabel="28.0" m_display="0" m_delay="0.48" m_topoIndex="96" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <controlInputObjs>block_130</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/matmul.cpp">
+      <validLinenumbers>74</validLinenumbers>
+      <validLinenumbers>66</validLinenumbers>
+      <validLinenumbers>70</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="151" name="._crit_edge.loopexit.3" type="BlockType">
+    <controlInputObjs>block_130</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_11</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="147" name="add_ln66" lineNumber="66" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="add_ln66_fu_648_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="mat_mul" bitwidth="6" opcode="add" nodeLabel="37.0" m_display="0" m_delay="0.88" m_topoIndex="116" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="66" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="148" name="output_addr_11" lineNumber="74" fileName="../src/matmul.cpp" fileDirectory=".." coreId="0" contextFuncName="mat_mul" bitwidth="11" opcode="getelementptr" nodeLabel="37.0" m_display="0" m_topoIndex="117" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="74" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>output_r</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="149" name="output_addr_11_write_ln74" lineNumber="74" fileName="../src/matmul.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="mat_mul" opcode="store" nodeLabel="37.0" m_display="0" m_delay="1.35" m_topoIndex="118" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="74" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="150" name="br_ln0" coreId="711653680" opcode="br" nodeLabel="37.0" m_display="0" m_topoIndex="119" m_clusterGroupNumber="-1">
+      <controlInputObjs>block_11</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/matmul.cpp">
+      <validLinenumbers>66</validLinenumbers>
+      <validLinenumbers>74</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="153" name="._crit_edge8.loopexit" type="BlockType">
+    <controlInputObjs>block_11</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="152" name="_ln76" lineNumber="76" fileName="../src/matmul.cpp" fileDirectory=".." coreId="132" contextFuncName="mat_mul" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="../src/matmul.cpp" linenumber="76" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="../src/matmul.cpp">
+      <validLinenumbers>76</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="652" pipe_depth="8" RegionName="VITIS_LOOP_70_2">
+    <basic_blocks id="28" name="block_28" type="BlockType">
+      <controlInputObjs>.split2.0</controlInputObjs>
+      <controlInputObjs>.split.0</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>._crit_edge.loopexit.0</controlOutputObjs>
+      <controlOutputObjs>.split.0</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="j_0" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." coreId="718536976" contextFuncName="mat_mul" bitwidth="4" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <controlInputObjs>.split.0</controlInputObjs>
+        <controlInputObjs>.split2.0</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="sum_0" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreId="84" contextFuncName="mat_mul" bitwidth="32" opcode="phi" nodeLabel="9.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>facc</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <controlInputObjs>.split.0</controlInputObjs>
+        <controlInputObjs>.split2.0</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="add_ln70" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="add_ln70_fu_337_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="mat_mul" bitwidth="4" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.86" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="icmp_ln70" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="icmp_ln70_fu_343_p2" opType="icmp" coreId="0" contextFuncName="mat_mul" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="0.88" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="br_ln70" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." coreId="0" contextFuncName="mat_mul" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split.0</controlInputObjs>
+        <controlInputObjs>._crit_edge.loopexit.0</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../src/matmul.cpp">
+        <validLinenumbers>70</validLinenumbers>
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="44" name=".split.0" type="BlockType">
+      <controlInputObjs>block_28</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_28</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="j_0_cast9" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="j_0_cast9_fu_349_p1" coreId="49" contextFuncName="mat_mul" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="j_0_cast" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="j_0_cast_fu_354_p1" coreId="0" contextFuncName="mat_mul" bitwidth="7" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="add_ln72_3" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="add_ln72_3_fu_358_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="mat_mul" bitwidth="7" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.88" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="zext_ln72" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="zext_ln72_fu_363_p1" coreId="718517200" contextFuncName="mat_mul" bitwidth="9" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="add_ln72" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="add_ln72_fu_367_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="mat_mul" bitwidth="9" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.9" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="zext_ln72_7" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="zext_ln72_7_fu_372_p1" coreId="718518944" contextFuncName="mat_mul" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="layer7_weights_addr" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreId="49" contextFuncName="mat_mul" bitwidth="9" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="layer7_weights_load" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="101" contextFuncName="mat_mul" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>fmul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="input_addr" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreId="0" contextFuncName="mat_mul" bitwidth="4" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>input_r</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="input_load" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="mat_mul" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>fmul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="mul4" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreName="FMul_maxdsp" implIndex="maxdsp" control="auto" opType="fmul" coreId="30" contextFuncName="mat_mul" bitwidth="32" opcode="fmul" nodeLabel="3.0" nodeLatency="3" m_display="0" m_delay="4.67" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>facc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="icmp_ln72" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="grp_fu_382_p2" opType="icmp" coreId="49" contextFuncName="mat_mul" bitwidth="1" opcode="icmp" nodeLabel="7.0" m_display="0" m_delay="0.88" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>facc</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="tmp" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="facc_32ns_32ns_1ns_32_3_no_dsp_1_U63" coreName="FAcc_nodsp" implIndex="fabric" control="auto" coreId="11" contextFuncName="mat_mul" bitwidth="32" opcode="facc" nodeLabel="7.0" nodeLatency="2" m_display="0" m_delay="5.48" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>fmul</dataInputObjs>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="br_ln0" coreId="0" opcode="br" nodeLabel="9.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_28</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../src/matmul.cpp">
+        <validLinenumbers>70</validLinenumbers>
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="653" pipe_depth="8" RegionName="VITIS_LOOP_70_2">
+    <basic_blocks id="62" name="block_62" type="BlockType">
+      <controlInputObjs>._crit_edge.loopexit.0</controlInputObjs>
+      <controlInputObjs>.split.1</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>._crit_edge.loopexit.1</controlOutputObjs>
+      <controlOutputObjs>.split.1</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="j_1" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." coreId="6001" contextFuncName="mat_mul" bitwidth="4" opcode="phi" nodeLabel="11.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <controlInputObjs>.split.1</controlInputObjs>
+        <controlInputObjs>._crit_edge.loopexit.0</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="sum_19" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreId="4785" contextFuncName="mat_mul" bitwidth="32" opcode="phi" nodeLabel="18.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>facc</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <controlInputObjs>.split.1</controlInputObjs>
+        <controlInputObjs>._crit_edge.loopexit.0</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="add_ln70_1" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="add_ln70_1_fu_423_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="mat_mul" bitwidth="4" opcode="add" nodeLabel="11.0" m_display="0" m_delay="0.86" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="icmp_ln70_1" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="icmp_ln70_1_fu_429_p2" opType="icmp" coreId="1409286288" contextFuncName="mat_mul" bitwidth="1" opcode="icmp" nodeLabel="11.0" m_display="0" m_delay="0.88" m_topoIndex="44" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="br_ln70" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." coreId="8" contextFuncName="mat_mul" opcode="br" nodeLabel="11.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split.1</controlInputObjs>
+        <controlInputObjs>._crit_edge.loopexit.1</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../src/matmul.cpp">
+        <validLinenumbers>70</validLinenumbers>
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="78" name=".split.1" type="BlockType">
+      <controlInputObjs>block_62</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_62</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="j_1_cast11" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="j_1_cast11_fu_435_p1" coreId="65" contextFuncName="mat_mul" bitwidth="64" opcode="zext" nodeLabel="11.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="j_1_cast" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="j_1_cast_fu_440_p1" coreId="132" contextFuncName="mat_mul" bitwidth="7" opcode="zext" nodeLabel="11.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="add_ln72_4" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="add_ln72_4_fu_444_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="mat_mul" bitwidth="7" opcode="add" nodeLabel="11.0" m_display="0" m_delay="0.88" m_topoIndex="48" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="zext_ln72_8" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="zext_ln72_8_fu_449_p1" coreId="1409286288" contextFuncName="mat_mul" bitwidth="9" opcode="zext" nodeLabel="11.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="add_ln72_5" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="add_ln72_5_fu_453_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="mat_mul" bitwidth="9" opcode="add" nodeLabel="11.0" m_display="0" m_delay="0.9" m_topoIndex="50" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="zext_ln72_9" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="zext_ln72_9_fu_458_p1" coreId="10" contextFuncName="mat_mul" bitwidth="64" opcode="zext" nodeLabel="11.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="layer7_weights_addr_1" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreId="132" contextFuncName="mat_mul" bitwidth="9" opcode="getelementptr" nodeLabel="11.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="layer7_weights_load_1" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="101" contextFuncName="mat_mul" bitwidth="32" opcode="load" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="53" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>fmul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="input_addr_8" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreId="0" contextFuncName="mat_mul" bitwidth="4" opcode="getelementptr" nodeLabel="11.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>input_r</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="input_load_1" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="mat_mul" bitwidth="32" opcode="load" nodeLabel="11.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="55" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>fmul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="mul4_1" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreName="FMul_maxdsp" implIndex="maxdsp" control="auto" opType="fmul" coreId="30" contextFuncName="mat_mul" bitwidth="32" opcode="fmul" nodeLabel="12.0" nodeLatency="3" m_display="0" m_delay="4.67" m_topoIndex="56" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>facc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="icmp_ln72_8" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="grp_fu_468_p2" opType="icmp" coreId="11" contextFuncName="mat_mul" bitwidth="1" opcode="icmp" nodeLabel="16.0" m_display="0" m_delay="0.88" m_topoIndex="57" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>facc</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="tmp_11" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="facc_32ns_32ns_1ns_32_3_no_dsp_1_U64" coreName="FAcc_nodsp" implIndex="fabric" control="auto" coreId="11" contextFuncName="mat_mul" bitwidth="32" opcode="facc" nodeLabel="16.0" nodeLatency="2" m_display="0" m_delay="5.48" m_topoIndex="58" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>fmul</dataInputObjs>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="br_ln0" coreId="3873" opcode="br" nodeLabel="18.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_62</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../src/matmul.cpp">
+        <validLinenumbers>70</validLinenumbers>
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="654" pipe_depth="8" RegionName="VITIS_LOOP_70_2">
+    <basic_blocks id="96" name="block_96" type="BlockType">
+      <controlInputObjs>._crit_edge.loopexit.1</controlInputObjs>
+      <controlInputObjs>.split.2</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>._crit_edge.loopexit.2</controlOutputObjs>
+      <controlOutputObjs>.split.2</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="89" name="j_2" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." coreId="1" contextFuncName="mat_mul" bitwidth="4" opcode="phi" nodeLabel="20.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <controlInputObjs>.split.2</controlInputObjs>
+        <controlInputObjs>._crit_edge.loopexit.1</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="90" name="sum_2" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreId="0" contextFuncName="mat_mul" bitwidth="32" opcode="phi" nodeLabel="27.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>facc</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <controlInputObjs>.split.2</controlInputObjs>
+        <controlInputObjs>._crit_edge.loopexit.1</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="91" name="add_ln70_2" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="add_ln70_2_fu_509_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="mat_mul" bitwidth="4" opcode="add" nodeLabel="20.0" m_display="0" m_delay="0.86" m_topoIndex="71" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="93" name="icmp_ln70_2" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="icmp_ln70_2_fu_515_p2" opType="icmp" coreId="1885548140" contextFuncName="mat_mul" bitwidth="1" opcode="icmp" nodeLabel="20.0" m_display="0" m_delay="0.88" m_topoIndex="72" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="95" name="br_ln70" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." coreId="718479944" contextFuncName="mat_mul" opcode="br" nodeLabel="20.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split.2</controlInputObjs>
+        <controlInputObjs>._crit_edge.loopexit.2</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../src/matmul.cpp">
+        <validLinenumbers>70</validLinenumbers>
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="112" name=".split.2" type="BlockType">
+      <controlInputObjs>block_96</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_96</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="97" name="j_2_cast13" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="j_2_cast13_fu_521_p1" coreId="718483360" contextFuncName="mat_mul" bitwidth="64" opcode="zext" nodeLabel="20.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="98" name="j_2_cast" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="j_2_cast_fu_526_p1" coreId="1869833586" contextFuncName="mat_mul" bitwidth="7" opcode="zext" nodeLabel="20.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="100" name="add_ln72_6" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="add_ln72_6_fu_530_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="mat_mul" bitwidth="7" opcode="add" nodeLabel="20.0" m_display="0" m_delay="0.88" m_topoIndex="76" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="101" name="zext_ln72_10" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="zext_ln72_10_fu_535_p1" coreId="0" contextFuncName="mat_mul" bitwidth="9" opcode="zext" nodeLabel="20.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="102" name="add_ln72_7" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="add_ln72_7_fu_539_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="mat_mul" bitwidth="9" opcode="add" nodeLabel="20.0" m_display="0" m_delay="0.9" m_topoIndex="78" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="103" name="zext_ln72_11" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="zext_ln72_11_fu_544_p1" coreId="1409286288" contextFuncName="mat_mul" bitwidth="64" opcode="zext" nodeLabel="20.0" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="104" name="layer7_weights_addr_2" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreId="718486768" contextFuncName="mat_mul" bitwidth="9" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="80" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="105" name="layer7_weights_load_2" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="101" contextFuncName="mat_mul" bitwidth="32" opcode="load" nodeLabel="20.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="81" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>fmul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="106" name="input_addr_9" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreId="718493256" contextFuncName="mat_mul" bitwidth="4" opcode="getelementptr" nodeLabel="20.0" m_display="0" m_topoIndex="82" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>input_r</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="107" name="input_load_2" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="mat_mul" bitwidth="32" opcode="load" nodeLabel="20.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="83" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>fmul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="108" name="mul4_2" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreName="FMul_maxdsp" implIndex="maxdsp" control="auto" opType="fmul" coreId="30" contextFuncName="mat_mul" bitwidth="32" opcode="fmul" nodeLabel="21.0" nodeLatency="3" m_display="0" m_delay="4.67" m_topoIndex="84" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>facc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="109" name="icmp_ln72_9" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="grp_fu_554_p2" opType="icmp" coreId="718495560" contextFuncName="mat_mul" bitwidth="1" opcode="icmp" nodeLabel="25.0" m_display="0" m_delay="0.88" m_topoIndex="85" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>facc</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="110" name="tmp_12" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="facc_32ns_32ns_1ns_32_3_no_dsp_1_U65" coreName="FAcc_nodsp" implIndex="fabric" control="auto" coreId="11" contextFuncName="mat_mul" bitwidth="32" opcode="facc" nodeLabel="25.0" nodeLatency="2" m_display="0" m_delay="5.48" m_topoIndex="86" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>fmul</dataInputObjs>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="111" name="br_ln0" coreId="0" opcode="br" nodeLabel="27.0" m_display="0" m_topoIndex="87" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_96</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../src/matmul.cpp">
+        <validLinenumbers>70</validLinenumbers>
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="655" pipe_depth="8" RegionName="VITIS_LOOP_70_2">
+    <basic_blocks id="130" name="block_130" type="BlockType">
+      <controlInputObjs>._crit_edge.loopexit.2</controlInputObjs>
+      <controlInputObjs>.split.3</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>._crit_edge.loopexit.3</controlOutputObjs>
+      <controlOutputObjs>.split.3</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="123" name="j_3" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." coreId="132" contextFuncName="mat_mul" bitwidth="4" opcode="phi" nodeLabel="29.0" m_display="0" m_topoIndex="97" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <controlInputObjs>.split.3</controlInputObjs>
+        <controlInputObjs>._crit_edge.loopexit.2</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="124" name="sum_3" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreId="132" contextFuncName="mat_mul" bitwidth="32" opcode="phi" nodeLabel="36.0" m_display="0" m_topoIndex="98" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>facc</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <controlInputObjs>.split.3</controlInputObjs>
+        <controlInputObjs>._crit_edge.loopexit.2</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="125" name="add_ln70_3" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="add_ln70_3_fu_595_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="mat_mul" bitwidth="4" opcode="add" nodeLabel="29.0" m_display="0" m_delay="0.86" m_topoIndex="99" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="127" name="icmp_ln70_3" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="icmp_ln70_3_fu_601_p2" opType="icmp" coreId="0" contextFuncName="mat_mul" bitwidth="1" opcode="icmp" nodeLabel="29.0" m_display="0" m_delay="0.88" m_topoIndex="100" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="129" name="br_ln70" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." coreId="712306080" contextFuncName="mat_mul" opcode="br" nodeLabel="29.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split.3</controlInputObjs>
+        <controlInputObjs>._crit_edge.loopexit.3</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../src/matmul.cpp">
+        <validLinenumbers>70</validLinenumbers>
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="146" name=".split.3" type="BlockType">
+      <controlInputObjs>block_130</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_130</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="131" name="j_3_cast15" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="j_3_cast15_fu_607_p1" coreId="1409286288" contextFuncName="mat_mul" bitwidth="64" opcode="zext" nodeLabel="29.0" m_display="0" m_topoIndex="102" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="132" name="j_3_cast" lineNumber="70" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="j_3_cast_fu_612_p1" coreId="712308360" contextFuncName="mat_mul" bitwidth="7" opcode="zext" nodeLabel="29.0" m_display="0" m_topoIndex="103" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="70" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="134" name="add_ln72_8" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="add_ln72_8_fu_616_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="mat_mul" bitwidth="7" opcode="add" nodeLabel="29.0" m_display="0" m_delay="0.88" m_topoIndex="104" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="135" name="zext_ln72_12" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="zext_ln72_12_fu_621_p1" coreId="712310640" contextFuncName="mat_mul" bitwidth="9" opcode="zext" nodeLabel="29.0" m_display="0" m_topoIndex="105" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="136" name="add_ln72_9" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="add_ln72_9_fu_625_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="mat_mul" bitwidth="9" opcode="add" nodeLabel="29.0" m_display="0" m_delay="0.9" m_topoIndex="106" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="137" name="zext_ln72_13" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="zext_ln72_13_fu_630_p1" coreId="6945" contextFuncName="mat_mul" bitwidth="64" opcode="zext" nodeLabel="29.0" m_display="0" m_topoIndex="107" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="138" name="layer7_weights_addr_3" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreId="0" contextFuncName="mat_mul" bitwidth="9" opcode="getelementptr" nodeLabel="29.0" m_display="0" m_topoIndex="108" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="139" name="layer7_weights_load_3" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="101" contextFuncName="mat_mul" bitwidth="32" opcode="load" nodeLabel="29.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="109" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>fmul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="140" name="input_addr_10" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreId="1409286288" contextFuncName="mat_mul" bitwidth="4" opcode="getelementptr" nodeLabel="29.0" m_display="0" m_topoIndex="110" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>input_r</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="141" name="input_load_3" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="mat_mul" bitwidth="32" opcode="load" nodeLabel="29.0" nodeLatency="1" m_display="0" m_delay="0.79" m_topoIndex="111" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>fmul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="142" name="mul4_3" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." coreName="FMul_maxdsp" implIndex="maxdsp" control="auto" opType="fmul" coreId="30" contextFuncName="mat_mul" bitwidth="32" opcode="fmul" nodeLabel="30.0" nodeLatency="3" m_display="0" m_delay="4.67" m_topoIndex="112" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>facc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="143" name="icmp_ln72_10" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="grp_fu_640_p2" opType="icmp" coreId="1634738279" contextFuncName="mat_mul" bitwidth="1" opcode="icmp" nodeLabel="34.0" m_display="0" m_delay="0.88" m_topoIndex="113" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>facc</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="144" name="tmp_13" lineNumber="72" fileName="../src/matmul.cpp" fileDirectory=".." rtlName="facc_32ns_32ns_1ns_32_3_no_dsp_1_U66" coreName="FAcc_nodsp" implIndex="fabric" control="auto" coreId="11" contextFuncName="mat_mul" bitwidth="32" opcode="facc" nodeLabel="34.0" nodeLatency="2" m_display="0" m_delay="5.48" m_topoIndex="114" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../src/matmul.cpp" linenumber="72" fileDirectory="/home/mads/EmbeddedFinal/EmbeddedFinalMPSoC/hls/NeuralNetwork_kernel" functionName="mat_mul"/>
+        <dataInputObjs>fmul</dataInputObjs>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="145" name="br_ln0" coreId="0" opcode="br" nodeLabel="36.0" m_display="0" m_topoIndex="115" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_130</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../src/matmul.cpp">
+        <validLinenumbers>70</validLinenumbers>
+        <validLinenumbers>72</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <ScheduleInfo time="16"/>
+  <ScheduleInfo time="17"/>
+  <ScheduleInfo time="18"/>
+  <ScheduleInfo time="19"/>
+  <ScheduleInfo time="20"/>
+  <ScheduleInfo time="21"/>
+  <ScheduleInfo time="22"/>
+  <ScheduleInfo time="23"/>
+  <ScheduleInfo time="24"/>
+  <ScheduleInfo time="25"/>
+  <ScheduleInfo time="26"/>
+  <ScheduleInfo time="27"/>
+  <ScheduleInfo time="28"/>
+  <ScheduleInfo time="29"/>
+  <ScheduleInfo time="30"/>
+  <ScheduleInfo time="31"/>
+  <ScheduleInfo time="32"/>
+  <ScheduleInfo time="33"/>
+  <ScheduleInfo time="34"/>
+  <ScheduleInfo time="35"/>
+  <ScheduleInfo time="36"/>
+  <ScheduleInfo time="37"/>
+  <regnodes realName="zext_ln70_1_reg_720">
+    <nodeIds>52</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln70_3_reg_815">
+    <nodeIds>125</nodeIds>
+  </regnodes>
+  <regnodes realName="layer7_weights_addr_1_reg_735">
+    <nodeIds>70</nodeIds>
+  </regnodes>
+  <regnodes realName="p_shl_cast_reg_670">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="p_shl4_cast_reg_760">
+    <nodeIds>84</nodeIds>
+  </regnodes>
+  <regnodes realName="layer7_weights_addr_reg_690">
+    <nodeIds>36</nodeIds>
+  </regnodes>
+  <regnodes realName="input_addr_8_reg_740">
+    <nodeIds>72</nodeIds>
+  </regnodes>
+  <regnodes realName="input_addr_reg_695">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <regnodes realName="j_0_reg_185">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln70_1_reg_731">
+    <nodeIds>59</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_297">
+    <nodeIds>40</nodeIds>
+    <nodeIds>74</nodeIds>
+    <nodeIds>108</nodeIds>
+    <nodeIds>142</nodeIds>
+  </regnodes>
+  <regnodes realName="i_0_reg_173">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_292">
+    <nodeIds>39</nodeIds>
+    <nodeIds>73</nodeIds>
+    <nodeIds>107</nodeIds>
+    <nodeIds>141</nodeIds>
+  </regnodes>
+  <regnodes realName="p_shl2_cast_reg_715">
+    <nodeIds>50</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln70_reg_686">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="sum_0_reg_196">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln70_reg_680">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_287">
+    <nodeIds>37</nodeIds>
+    <nodeIds>71</nodeIds>
+    <nodeIds>105</nodeIds>
+    <nodeIds>139</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_reg_705">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="sum_19_reg_220">
+    <nodeIds>56</nodeIds>
+  </regnodes>
+  <regnodes realName="layer7_weights_addr_2_reg_780">
+    <nodeIds>104</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln72_8_reg_745">
+    <nodeIds>75</nodeIds>
+  </regnodes>
+  <regnodes realName="p_shl6_cast_reg_805">
+    <nodeIds>118</nodeIds>
+  </regnodes>
+  <regnodes realName="j_1_reg_209">
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_11_reg_750">
+    <nodeIds>76</nodeIds>
+  </regnodes>
+  <regnodes realName="input_addr_9_reg_785">
+    <nodeIds>106</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_13_reg_840">
+    <nodeIds>144</nodeIds>
+  </regnodes>
+  <regnodes realName="or_ln66_8_cast14_reg_800">
+    <nodeIds>116</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln70_2_reg_765">
+    <nodeIds>86</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln66_reg_845">
+    <nodeIds>147</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln70_2_reg_770">
+    <nodeIds>91</nodeIds>
+  </regnodes>
+  <regnodes realName="or_ln66_cast10_reg_710">
+    <nodeIds>48</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln70_reg_675">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln70_2_reg_776">
+    <nodeIds>93</nodeIds>
+  </regnodes>
+  <regnodes realName="j_2_reg_233">
+    <nodeIds>89</nodeIds>
+  </regnodes>
+  <regnodes realName="input_addr_10_reg_830">
+    <nodeIds>140</nodeIds>
+  </regnodes>
+  <regnodes realName="j_3_reg_257">
+    <nodeIds>123</nodeIds>
+  </regnodes>
+  <regnodes realName="sum_2_reg_244">
+    <nodeIds>90</nodeIds>
+  </regnodes>
+  <regnodes realName="or_ln66_7_cast12_reg_755">
+    <nodeIds>82</nodeIds>
+  </regnodes>
+  <regnodes realName="sum_3_reg_268">
+    <nodeIds>124</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_12_reg_795">
+    <nodeIds>110</nodeIds>
+  </regnodes>
+  <regnodes realName="layer7_weights_addr_3_reg_825">
+    <nodeIds>138</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln72_reg_700">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln70_1_reg_725">
+    <nodeIds>57</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln72_9_reg_790">
+    <nodeIds>109</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln66_reg_658">
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln70_3_reg_810">
+    <nodeIds>120</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln70_3_reg_821">
+    <nodeIds>127</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln66_reg_654">
+    <nodeIds>8</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln72_10_reg_835">
+    <nodeIds>143</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln66_reg_663">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <expressionNodes realName="layer7_weights_addr_1_gep_fu_101">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln66_fu_311">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="input_addr_9_gep_fu_133">
+    <nodeIds>106</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln72_8_fu_449">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln70_1_fu_419">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln70_fu_333">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln70_fu_343">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="input_addr_8_gep_fu_109">
+    <nodeIds>72</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sum_19_phi_fu_225">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="layer7_weights_addr_2_gep_fu_125">
+    <nodeIds>104</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_0_cast9_fu_349">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_3_cast_fu_612">
+    <nodeIds>132</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln66_cast10_fu_395">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln72_10_fu_635">
+    <nodeIds>143</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl2_cast_fu_407">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl_cast_fu_323">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl4_fu_485">
+    <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln72_4_fu_444">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln72_fu_363">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sum_2_phi_fu_249">
+    <nodeIds>90</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln72_7_fu_539">
+    <nodeIds>102</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl_fu_315">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln66_fu_307">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln72_9_fu_458">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="output_addr_11_gep_fu_165">
+    <nodeIds>148</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln72_7_fu_372">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln72_fu_377">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl4_cast_fu_493">
+    <nodeIds>84</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_2_cast13_fu_521">
+    <nodeIds>97</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sum_3_phi_fu_273">
+    <nodeIds>124</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln70_1_fu_429">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_0_phi_fu_189">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_0_cast_fu_354">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln70_3_fu_591">
+    <nodeIds>120</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="input_addr_gep_fu_75">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_96_fu_327">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln66_7_cast12_fu_481">
+    <nodeIds>82</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl6_fu_571">
+    <nodeIds>117</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl6_cast_fu_579">
+    <nodeIds>118</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln72_10_fu_535">
+    <nodeIds>101</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln72_13_fu_630">
+    <nodeIds>137</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln66_fu_648">
+    <nodeIds>147</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln72_5_fu_453">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_3_cast15_fu_607">
+    <nodeIds>131</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="output_addr_gep_fu_88">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln72_9_fu_625">
+    <nodeIds>136</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln70_3_fu_595">
+    <nodeIds>125</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_1_phi_fu_213">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln72_8_fu_463">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_3_phi_fu_261">
+    <nodeIds>123</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln72_12_fu_621">
+    <nodeIds>135</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_1_cast_fu_440">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln70_2_fu_515">
+    <nodeIds>93</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln66_5_fu_476">
+    <nodeIds>81</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln72_9_fu_549">
+    <nodeIds>109</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln70_2_fu_509">
+    <nodeIds>91</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln66_fu_390">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sum_0_phi_fu_201">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="layer7_weights_addr_gep_fu_62">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl7_fu_583">
+    <nodeIds>119</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln66_8_cast14_fu_567">
+    <nodeIds>116</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_0_phi_fu_177">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln72_11_fu_544">
+    <nodeIds>103</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln70_fu_337">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln70_1_fu_423">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="layer7_weights_addr_3_gep_fu_149">
+    <nodeIds>138</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln70_2_fu_505">
+    <nodeIds>86</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln72_8_fu_616">
+    <nodeIds>134</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln66_fu_301">
+    <nodeIds>8</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="input_addr_10_gep_fu_157">
+    <nodeIds>140</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln66_6_fu_562">
+    <nodeIds>115</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_1_cast11_fu_435">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_2_cast_fu_526">
+    <nodeIds>98</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln70_3_fu_601">
+    <nodeIds>127</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln72_3_fu_358">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="output_addr_9_gep_fu_117">
+    <nodeIds>79</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln72_fu_367">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_2_phi_fu_237">
+    <nodeIds>89</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="output_addr_10_gep_fu_141">
+    <nodeIds>113</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl5_fu_497">
+    <nodeIds>85</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln72_6_fu_530">
+    <nodeIds>100</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl2_fu_399">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl3_fu_411">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_281">
+    <nodeIds>40</nodeIds>
+    <nodeIds>74</nodeIds>
+    <nodeIds>108</nodeIds>
+    <nodeIds>142</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_382">
+    <nodeIds>42</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_468">
+    <nodeIds>76</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_640">
+    <nodeIds>144</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_554">
+    <nodeIds>110</nodeIds>
+  </moduleNodes>
+  <memoryPorts dataString="input_r">
+    <nodeIds>39</nodeIds>
+    <nodeIds>73</nodeIds>
+    <nodeIds>107</nodeIds>
+    <nodeIds>141</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="layer7_weights">
+    <nodeIds>37</nodeIds>
+    <nodeIds>71</nodeIds>
+    <nodeIds>105</nodeIds>
+    <nodeIds>139</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="output_r">
+    <nodeIds>46</nodeIds>
+    <nodeIds>80</nodeIds>
+    <nodeIds>114</nodeIds>
+    <nodeIds>149</nodeIds>
+  </memoryPorts>
+  <ioPorts name="input_r(p0)">
+    <contents name="load">
+      <nodeIds>39</nodeIds>
+      <nodeIds>73</nodeIds>
+      <nodeIds>107</nodeIds>
+      <nodeIds>141</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="output_r(p0)">
+    <contents name="store">
+      <nodeIds>46</nodeIds>
+      <nodeIds>80</nodeIds>
+      <nodeIds>114</nodeIds>
+      <nodeIds>149</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="5" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="152" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="2" latency="2"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="2" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="37" stage="1" latency="2"/>
+      <operations id="39" stage="1" latency="2"/>
+      <operations id="40" stage="4" latency="4"/>
+    </states>
+    <states id="5">
+      <operations id="40" stage="3" latency="4"/>
+    </states>
+    <states id="6">
+      <operations id="40" stage="2" latency="4"/>
+    </states>
+    <states id="7">
+      <operations id="40" stage="1" latency="4"/>
+    </states>
+    <states id="8">
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="3" latency="3"/>
+    </states>
+    <states id="9">
+      <operations id="42" stage="2" latency="3"/>
+    </states>
+    <states id="10">
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="3"/>
+      <operations id="43" stage="1" latency="1"/>
+    </states>
+    <states id="11">
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+    </states>
+    <states id="12">
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="2" latency="2"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="2" latency="2"/>
+    </states>
+    <states id="13">
+      <operations id="71" stage="1" latency="2"/>
+      <operations id="73" stage="1" latency="2"/>
+      <operations id="74" stage="4" latency="4"/>
+    </states>
+    <states id="14">
+      <operations id="74" stage="3" latency="4"/>
+    </states>
+    <states id="15">
+      <operations id="74" stage="2" latency="4"/>
+    </states>
+    <states id="16">
+      <operations id="74" stage="1" latency="4"/>
+    </states>
+    <states id="17">
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="3" latency="3"/>
+    </states>
+    <states id="18">
+      <operations id="76" stage="2" latency="3"/>
+    </states>
+    <states id="19">
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="3"/>
+      <operations id="77" stage="1" latency="1"/>
+    </states>
+    <states id="20">
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+    </states>
+    <states id="21">
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="94" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="1"/>
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+      <operations id="102" stage="1" latency="1"/>
+      <operations id="103" stage="1" latency="1"/>
+      <operations id="104" stage="1" latency="1"/>
+      <operations id="105" stage="2" latency="2"/>
+      <operations id="106" stage="1" latency="1"/>
+      <operations id="107" stage="2" latency="2"/>
+    </states>
+    <states id="22">
+      <operations id="105" stage="1" latency="2"/>
+      <operations id="107" stage="1" latency="2"/>
+      <operations id="108" stage="4" latency="4"/>
+    </states>
+    <states id="23">
+      <operations id="108" stage="3" latency="4"/>
+    </states>
+    <states id="24">
+      <operations id="108" stage="2" latency="4"/>
+    </states>
+    <states id="25">
+      <operations id="108" stage="1" latency="4"/>
+    </states>
+    <states id="26">
+      <operations id="109" stage="1" latency="1"/>
+      <operations id="110" stage="3" latency="3"/>
+    </states>
+    <states id="27">
+      <operations id="110" stage="2" latency="3"/>
+    </states>
+    <states id="28">
+      <operations id="99" stage="1" latency="1"/>
+      <operations id="110" stage="1" latency="3"/>
+      <operations id="111" stage="1" latency="1"/>
+    </states>
+    <states id="29">
+      <operations id="113" stage="1" latency="1"/>
+      <operations id="114" stage="1" latency="1"/>
+      <operations id="115" stage="1" latency="1"/>
+      <operations id="116" stage="1" latency="1"/>
+      <operations id="117" stage="1" latency="1"/>
+      <operations id="118" stage="1" latency="1"/>
+      <operations id="119" stage="1" latency="1"/>
+      <operations id="120" stage="1" latency="1"/>
+      <operations id="121" stage="1" latency="1"/>
+    </states>
+    <states id="30">
+      <operations id="123" stage="1" latency="1"/>
+      <operations id="124" stage="1" latency="1"/>
+      <operations id="125" stage="1" latency="1"/>
+      <operations id="126" stage="1" latency="1"/>
+      <operations id="127" stage="1" latency="1"/>
+      <operations id="128" stage="1" latency="1"/>
+      <operations id="129" stage="1" latency="1"/>
+      <operations id="131" stage="1" latency="1"/>
+      <operations id="132" stage="1" latency="1"/>
+      <operations id="134" stage="1" latency="1"/>
+      <operations id="135" stage="1" latency="1"/>
+      <operations id="136" stage="1" latency="1"/>
+      <operations id="137" stage="1" latency="1"/>
+      <operations id="138" stage="1" latency="1"/>
+      <operations id="139" stage="2" latency="2"/>
+      <operations id="140" stage="1" latency="1"/>
+      <operations id="141" stage="2" latency="2"/>
+    </states>
+    <states id="31">
+      <operations id="139" stage="1" latency="2"/>
+      <operations id="141" stage="1" latency="2"/>
+      <operations id="142" stage="4" latency="4"/>
+    </states>
+    <states id="32">
+      <operations id="142" stage="3" latency="4"/>
+    </states>
+    <states id="33">
+      <operations id="142" stage="2" latency="4"/>
+    </states>
+    <states id="34">
+      <operations id="142" stage="1" latency="4"/>
+    </states>
+    <states id="35">
+      <operations id="143" stage="1" latency="1"/>
+      <operations id="144" stage="3" latency="3"/>
+    </states>
+    <states id="36">
+      <operations id="144" stage="2" latency="3"/>
+    </states>
+    <states id="37">
+      <operations id="133" stage="1" latency="1"/>
+      <operations id="144" stage="1" latency="3"/>
+      <operations id="145" stage="1" latency="1"/>
+    </states>
+    <states id="38">
+      <operations id="147" stage="1" latency="1"/>
+      <operations id="148" stage="1" latency="1"/>
+      <operations id="149" stage="1" latency="1"/>
+      <operations id="150" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="20" outState="21">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="29" outState="30">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="38" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="16">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="16" outState="17">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="17" outState="18">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="18" outState="19">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="19" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="20">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="22" outState="23">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="23" outState="24">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="24" outState="25">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="25" outState="26">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="26" outState="27">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="27" outState="28">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="28" outState="21">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="21" outState="29">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="21" outState="22">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="31" outState="32">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="32" outState="33">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="33" outState="34">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="34" outState="35">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="35" outState="36">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="36" outState="37">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="37" outState="30">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="30" outState="38">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="30" outState="31">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="mat_mul" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="585" mMaxLatency="585">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>13</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>6</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_66_1" mII="-1" mDepth="-1" mMinTripCount="8" mMaxTripCount="8" mMinLatency="584" mMaxLatency="584" mType="1">
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>6</subRegions>
+      <subRegions>7</subRegions>
+      <subRegions>8</subRegions>
+      <subRegions>9</subRegions>
+      <subRegions>10</subRegions>
+      <subRegions>11</subRegions>
+      <subRegions>12</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>11</basicBlocks>
+      <basicBlocks>20</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="VITIS_LOOP_70_2" mII="1" mDepth="8" mMinTripCount="10" mMaxTripCount="10" mMinLatency="16" mMaxLatency="16" mType="1">
+      <basicBlocks>28</basicBlocks>
+      <basicBlocks>44</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>54</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="VITIS_LOOP_70_2" mII="1" mDepth="8" mMinTripCount="10" mMaxTripCount="10" mMinLatency="16" mMaxLatency="16" mType="1">
+      <basicBlocks>62</basicBlocks>
+      <basicBlocks>78</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="8" mTag="Region 3" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>88</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="9" mTag="VITIS_LOOP_70_2" mII="1" mDepth="8" mMinTripCount="10" mMaxTripCount="10" mMinLatency="16" mMaxLatency="16" mType="1">
+      <basicBlocks>96</basicBlocks>
+      <basicBlocks>112</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="10" mTag="Region 4" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>122</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="11" mTag="VITIS_LOOP_70_2" mII="1" mDepth="8" mMinTripCount="10" mMaxTripCount="10" mMinLatency="16" mMaxLatency="16" mType="1">
+      <basicBlocks>130</basicBlocks>
+      <basicBlocks>146</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="12" mTag="Region 5" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>151</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="13" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>153</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

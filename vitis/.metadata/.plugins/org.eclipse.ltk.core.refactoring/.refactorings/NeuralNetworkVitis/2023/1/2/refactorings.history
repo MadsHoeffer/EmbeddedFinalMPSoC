@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;NeuralNetworkVitis/src/data.c&apos; to &apos;data.h&apos;" description="Rename resource &apos;data.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/data.c" name="data.h" stamp="1673528104481" updateReferences="true"/>
+</session>

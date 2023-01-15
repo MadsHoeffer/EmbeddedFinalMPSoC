@@ -1,0 +1,609 @@
+
+
+================================================================
+== Vitis HLS Report for 'mat_mul'
+================================================================
+* Date:           Sat Jan 14 11:17:10 2023
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        NeuralNetworkKernel
+* Solution:       NN_kernel (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.368 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      585|      585|  5.850 us|  5.850 us|  585|  585|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_66_1   |      584|      584|        73|          -|          -|     8|        no|
+        | + VITIS_LOOP_70_2  |       16|       16|         8|          1|          1|    10|       yes|
+        | + VITIS_LOOP_70_2  |       16|       16|         8|          1|          1|    10|       yes|
+        | + VITIS_LOOP_70_2  |       16|       16|         8|          1|          1|    10|       yes|
+        | + VITIS_LOOP_70_2  |       16|       16|         8|          1|          1|    10|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 8
+  * Pipeline-1: initiation interval (II) = 1, depth = 8
+  * Pipeline-2: initiation interval (II) = 1, depth = 8
+  * Pipeline-3: initiation interval (II) = 1, depth = 8
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 38
+* Pipeline : 4
+  Pipeline-0 : II = 1, D = 8, States = { 3 4 5 6 7 8 9 10 }
+  Pipeline-1 : II = 1, D = 8, States = { 12 13 14 15 16 17 18 19 }
+  Pipeline-2 : II = 1, D = 8, States = { 21 22 23 24 25 26 27 28 }
+  Pipeline-3 : II = 1, D = 8, States = { 30 31 32 33 34 35 36 37 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 11 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 3 
+11 --> 12 
+12 --> 20 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 12 
+20 --> 21 
+21 --> 29 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 21 
+29 --> 30 
+30 --> 38 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 30 
+38 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.48>
+ST_1 : Operation 39 [1/1] (0.48ns)   --->   "%br_ln66 = br void" [../src/matmul.cpp:66]   --->   Operation 39 'br' 'br_ln66' <Predicate = true> <Delay = 0.48>
+
+State 2 <SV = 1> <Delay = 0.87>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%i_0 = phi i6 %add_ln66, void %._crit_edge.loopexit.3, i6 0, void %.lr.ph7" [../src/matmul.cpp:66]   --->   Operation 40 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.87ns)   --->   "%icmp_ln66 = icmp_eq  i6 %i_0, i6 32" [../src/matmul.cpp:66]   --->   Operation 41 'icmp' 'icmp_ln66' <Predicate = true> <Delay = 0.87> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 8, i64 8, i64 8"   --->   Operation 42 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%br_ln66 = br i1 %icmp_ln66, void %.split2.0, void %._crit_edge8.loopexit" [../src/matmul.cpp:66]   --->   Operation 43 'br' 'br_ln66' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%zext_ln66 = zext i6 %i_0" [../src/matmul.cpp:66]   --->   Operation 44 'zext' 'zext_ln66' <Predicate = (!icmp_ln66)> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%trunc_ln66 = trunc i6 %i_0" [../src/matmul.cpp:66]   --->   Operation 45 'trunc' 'trunc_ln66' <Predicate = (!icmp_ln66)> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%specloopname_ln66 = specloopname void @_ssdm_op_SpecLoopName, void @empty_2" [../src/matmul.cpp:66]   --->   Operation 46 'specloopname' 'specloopname_ln66' <Predicate = (!icmp_ln66)> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%p_shl = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i5.i3, i5 %trunc_ln66, i3 0" [../src/matmul.cpp:66]   --->   Operation 47 'bitconcatenate' 'p_shl' <Predicate = (!icmp_ln66)> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%p_shl_cast = zext i8 %p_shl" [../src/matmul.cpp:66]   --->   Operation 48 'zext' 'p_shl_cast' <Predicate = (!icmp_ln66)> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%empty_96 = shl i6 %i_0, i6 1" [../src/matmul.cpp:66]   --->   Operation 49 'shl' 'empty_96' <Predicate = (!icmp_ln66)> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%zext_ln70 = zext i6 %empty_96" [../src/matmul.cpp:70]   --->   Operation 50 'zext' 'zext_ln70' <Predicate = (!icmp_ln66)> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.48ns)   --->   "%br_ln70 = br void" [../src/matmul.cpp:70]   --->   Operation 51 'br' 'br_ln70' <Predicate = (!icmp_ln66)> <Delay = 0.48>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%ret_ln76 = ret" [../src/matmul.cpp:76]   --->   Operation 52 'ret' 'ret_ln76' <Predicate = (icmp_ln66)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.14>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%j_0 = phi i4 %add_ln70, void %.split.0, i4 0, void %.split2.0" [../src/matmul.cpp:70]   --->   Operation 53 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%sum_0 = phi i32 %tmp, void %.split.0, i32 0, void %.split2.0" [../src/matmul.cpp:72]   --->   Operation 54 'phi' 'sum_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.86ns)   --->   "%add_ln70 = add i4 %j_0, i4 1" [../src/matmul.cpp:70]   --->   Operation 55 'add' 'add_ln70' <Predicate = true> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 56 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 57 [1/1] (0.88ns)   --->   "%icmp_ln70 = icmp_eq  i4 %j_0, i4 10" [../src/matmul.cpp:70]   --->   Operation 57 'icmp' 'icmp_ln70' <Predicate = true> <Delay = 0.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%empty_95 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 10, i64 10, i64 10"   --->   Operation 58 'speclooptripcount' 'empty_95' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln70 = br i1 %icmp_ln70, void %.split.0, void %._crit_edge.loopexit.0" [../src/matmul.cpp:70]   --->   Operation 59 'br' 'br_ln70' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%j_0_cast9 = zext i4 %j_0" [../src/matmul.cpp:70]   --->   Operation 60 'zext' 'j_0_cast9' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%j_0_cast = zext i4 %j_0" [../src/matmul.cpp:70]   --->   Operation 61 'zext' 'j_0_cast' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+ST_3 : Operation 62 [1/1] (0.88ns)   --->   "%add_ln72_3 = add i7 %zext_ln70, i7 %j_0_cast" [../src/matmul.cpp:72]   --->   Operation 62 'add' 'add_ln72_3' <Predicate = (!icmp_ln70)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%zext_ln72 = zext i7 %add_ln72_3" [../src/matmul.cpp:72]   --->   Operation 63 'zext' 'zext_ln72' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.90ns)   --->   "%add_ln72 = add i9 %zext_ln72, i9 %p_shl_cast" [../src/matmul.cpp:72]   --->   Operation 64 'add' 'add_ln72' <Predicate = (!icmp_ln70)> <Delay = 0.90> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%zext_ln72_7 = zext i9 %add_ln72" [../src/matmul.cpp:72]   --->   Operation 65 'zext' 'zext_ln72_7' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%layer7_weights_addr = getelementptr i32 %layer7_weights, i64 0, i64 %zext_ln72_7" [../src/matmul.cpp:72]   --->   Operation 66 'getelementptr' 'layer7_weights_addr' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+ST_3 : Operation 67 [2/2] (1.35ns)   --->   "%layer7_weights_load = load i9 %layer7_weights_addr" [../src/matmul.cpp:72]   --->   Operation 67 'load' 'layer7_weights_load' <Predicate = (!icmp_ln70)> <Delay = 1.35> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 320> <ROM>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%input_addr = getelementptr i32 %input_r, i64 0, i64 %j_0_cast9" [../src/matmul.cpp:72]   --->   Operation 68 'getelementptr' 'input_addr' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+ST_3 : Operation 69 [2/2] (0.79ns)   --->   "%input_load = load i4 %input_addr" [../src/matmul.cpp:72]   --->   Operation 69 'load' 'input_load' <Predicate = (!icmp_ln70)> <Delay = 0.79> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+
+State 4 <SV = 3> <Delay = 6.02>
+ST_4 : Operation 70 [1/2] (1.35ns)   --->   "%layer7_weights_load = load i9 %layer7_weights_addr" [../src/matmul.cpp:72]   --->   Operation 70 'load' 'layer7_weights_load' <Predicate = (!icmp_ln70)> <Delay = 1.35> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 320> <ROM>
+ST_4 : Operation 71 [1/2] (0.79ns)   --->   "%input_load = load i4 %input_addr" [../src/matmul.cpp:72]   --->   Operation 71 'load' 'input_load' <Predicate = (!icmp_ln70)> <Delay = 0.79> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_4 : Operation 72 [4/4] (4.67ns)   --->   "%mul4 = fmul i32 %layer7_weights_load, i32 %input_load" [../src/matmul.cpp:72]   --->   Operation 72 'fmul' 'mul4' <Predicate = (!icmp_ln70)> <Delay = 4.67> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.67> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 4.67>
+ST_5 : Operation 73 [3/4] (4.67ns)   --->   "%mul4 = fmul i32 %layer7_weights_load, i32 %input_load" [../src/matmul.cpp:72]   --->   Operation 73 'fmul' 'mul4' <Predicate = (!icmp_ln70)> <Delay = 4.67> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.67> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 4.67>
+ST_6 : Operation 74 [2/4] (4.67ns)   --->   "%mul4 = fmul i32 %layer7_weights_load, i32 %input_load" [../src/matmul.cpp:72]   --->   Operation 74 'fmul' 'mul4' <Predicate = (!icmp_ln70)> <Delay = 4.67> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.67> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 4.67>
+ST_7 : Operation 75 [1/4] (4.67ns)   --->   "%mul4 = fmul i32 %layer7_weights_load, i32 %input_load" [../src/matmul.cpp:72]   --->   Operation 75 'fmul' 'mul4' <Predicate = (!icmp_ln70)> <Delay = 4.67> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.67> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 6.36>
+ST_8 : Operation 76 [1/1] (0.88ns)   --->   "%icmp_ln72 = icmp_eq  i4 %add_ln70, i4 10" [../src/matmul.cpp:72]   --->   Operation 76 'icmp' 'icmp_ln72' <Predicate = (!icmp_ln70)> <Delay = 0.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 77 [3/3] (5.48ns)   --->   "%tmp = facc i32 @_ssdm_op_FACC, i32 %mul4, i1 %icmp_ln72" [../src/matmul.cpp:72]   --->   Operation 77 'facc' 'tmp' <Predicate = (!icmp_ln70)> <Delay = 5.48> <CoreInst = "FAcc_nodsp">   --->   Core 11 'FAcc_nodsp' <Latency = 2> <II = 1> <Delay = 5.48> <FuncUnit> <Opcode : 'facc'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 5.48>
+ST_9 : Operation 78 [2/3] (5.48ns)   --->   "%tmp = facc i32 @_ssdm_op_FACC, i32 %mul4, i1 %icmp_ln72" [../src/matmul.cpp:72]   --->   Operation 78 'facc' 'tmp' <Predicate = (!icmp_ln70)> <Delay = 5.48> <CoreInst = "FAcc_nodsp">   --->   Core 11 'FAcc_nodsp' <Latency = 2> <II = 1> <Delay = 5.48> <FuncUnit> <Opcode : 'facc'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 5.48>
+ST_10 : Operation 79 [1/1] (0.00ns)   --->   "%specloopname_ln65 = specloopname void @_ssdm_op_SpecLoopName, void @empty" [../src/matmul.cpp:65]   --->   Operation 79 'specloopname' 'specloopname_ln65' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+ST_10 : Operation 80 [1/3] (5.48ns)   --->   "%tmp = facc i32 @_ssdm_op_FACC, i32 %mul4, i1 %icmp_ln72" [../src/matmul.cpp:72]   --->   Operation 80 'facc' 'tmp' <Predicate = (!icmp_ln70)> <Delay = 5.48> <CoreInst = "FAcc_nodsp">   --->   Core 11 'FAcc_nodsp' <Latency = 2> <II = 1> <Delay = 5.48> <FuncUnit> <Opcode : 'facc'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 81 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 81 'br' 'br_ln0' <Predicate = (!icmp_ln70)> <Delay = 0.00>
+
+State 11 <SV = 3> <Delay = 1.35>
+ST_11 : Operation 82 [1/1] (0.00ns)   --->   "%output_addr = getelementptr i32 %output_r, i64 0, i64 %zext_ln66" [../src/matmul.cpp:74]   --->   Operation 82 'getelementptr' 'output_addr' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 83 [1/1] (1.35ns)   --->   "%store_ln74 = store i32 %sum_0, i11 %output_addr" [../src/matmul.cpp:74]   --->   Operation 83 'store' 'store_ln74' <Predicate = true> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1620> <RAM>
+ST_11 : Operation 84 [1/1] (0.00ns)   --->   "%or_ln66 = or i5 %trunc_ln66, i5 1" [../src/matmul.cpp:66]   --->   Operation 84 'or' 'or_ln66' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 85 [1/1] (0.00ns)   --->   "%or_ln66_cast10 = zext i5 %or_ln66" [../src/matmul.cpp:66]   --->   Operation 85 'zext' 'or_ln66_cast10' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 86 [1/1] (0.00ns)   --->   "%p_shl2 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i5.i3, i5 %or_ln66, i3 0" [../src/matmul.cpp:66]   --->   Operation 86 'bitconcatenate' 'p_shl2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 87 [1/1] (0.00ns)   --->   "%p_shl2_cast = zext i8 %p_shl2" [../src/matmul.cpp:66]   --->   Operation 87 'zext' 'p_shl2_cast' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 88 [1/1] (0.00ns)   --->   "%p_shl3 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i5.i1, i5 %or_ln66, i1 0" [../src/matmul.cpp:66]   --->   Operation 88 'bitconcatenate' 'p_shl3' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 89 [1/1] (0.00ns)   --->   "%zext_ln70_1 = zext i6 %p_shl3" [../src/matmul.cpp:70]   --->   Operation 89 'zext' 'zext_ln70_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 90 [1/1] (0.48ns)   --->   "%br_ln70 = br void" [../src/matmul.cpp:70]   --->   Operation 90 'br' 'br_ln70' <Predicate = true> <Delay = 0.48>
+
+State 12 <SV = 4> <Delay = 3.14>
+ST_12 : Operation 91 [1/1] (0.00ns)   --->   "%j_1 = phi i4 %add_ln70_1, void %.split.1, i4 0, void %._crit_edge.loopexit.0" [../src/matmul.cpp:70]   --->   Operation 91 'phi' 'j_1' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 92 [1/1] (0.00ns)   --->   "%sum_19 = phi i32 %tmp_11, void %.split.1, i32 0, void %._crit_edge.loopexit.0" [../src/matmul.cpp:72]   --->   Operation 92 'phi' 'sum_19' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 93 [1/1] (0.86ns)   --->   "%add_ln70_1 = add i4 %j_1, i4 1" [../src/matmul.cpp:70]   --->   Operation 93 'add' 'add_ln70_1' <Predicate = true> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 94 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 94 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 95 [1/1] (0.88ns)   --->   "%icmp_ln70_1 = icmp_eq  i4 %j_1, i4 10" [../src/matmul.cpp:70]   --->   Operation 95 'icmp' 'icmp_ln70_1' <Predicate = true> <Delay = 0.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 96 [1/1] (0.00ns)   --->   "%empty_97 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 10, i64 10, i64 10"   --->   Operation 96 'speclooptripcount' 'empty_97' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 97 [1/1] (0.00ns)   --->   "%br_ln70 = br i1 %icmp_ln70_1, void %.split.1, void %._crit_edge.loopexit.1" [../src/matmul.cpp:70]   --->   Operation 97 'br' 'br_ln70' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 98 [1/1] (0.00ns)   --->   "%j_1_cast11 = zext i4 %j_1" [../src/matmul.cpp:70]   --->   Operation 98 'zext' 'j_1_cast11' <Predicate = (!icmp_ln70_1)> <Delay = 0.00>
+ST_12 : Operation 99 [1/1] (0.00ns)   --->   "%j_1_cast = zext i4 %j_1" [../src/matmul.cpp:70]   --->   Operation 99 'zext' 'j_1_cast' <Predicate = (!icmp_ln70_1)> <Delay = 0.00>
+ST_12 : Operation 100 [1/1] (0.88ns)   --->   "%add_ln72_4 = add i7 %zext_ln70_1, i7 %j_1_cast" [../src/matmul.cpp:72]   --->   Operation 100 'add' 'add_ln72_4' <Predicate = (!icmp_ln70_1)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 101 [1/1] (0.00ns)   --->   "%zext_ln72_8 = zext i7 %add_ln72_4" [../src/matmul.cpp:72]   --->   Operation 101 'zext' 'zext_ln72_8' <Predicate = (!icmp_ln70_1)> <Delay = 0.00>
+ST_12 : Operation 102 [1/1] (0.90ns)   --->   "%add_ln72_5 = add i9 %zext_ln72_8, i9 %p_shl2_cast" [../src/matmul.cpp:72]   --->   Operation 102 'add' 'add_ln72_5' <Predicate = (!icmp_ln70_1)> <Delay = 0.90> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 103 [1/1] (0.00ns)   --->   "%zext_ln72_9 = zext i9 %add_ln72_5" [../src/matmul.cpp:72]   --->   Operation 103 'zext' 'zext_ln72_9' <Predicate = (!icmp_ln70_1)> <Delay = 0.00>
+ST_12 : Operation 104 [1/1] (0.00ns)   --->   "%layer7_weights_addr_1 = getelementptr i32 %layer7_weights, i64 0, i64 %zext_ln72_9" [../src/matmul.cpp:72]   --->   Operation 104 'getelementptr' 'layer7_weights_addr_1' <Predicate = (!icmp_ln70_1)> <Delay = 0.00>
+ST_12 : Operation 105 [2/2] (1.35ns)   --->   "%layer7_weights_load_1 = load i9 %layer7_weights_addr_1" [../src/matmul.cpp:72]   --->   Operation 105 'load' 'layer7_weights_load_1' <Predicate = (!icmp_ln70_1)> <Delay = 1.35> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 320> <ROM>
+ST_12 : Operation 106 [1/1] (0.00ns)   --->   "%input_addr_8 = getelementptr i32 %input_r, i64 0, i64 %j_1_cast11" [../src/matmul.cpp:72]   --->   Operation 106 'getelementptr' 'input_addr_8' <Predicate = (!icmp_ln70_1)> <Delay = 0.00>
+ST_12 : Operation 107 [2/2] (0.79ns)   --->   "%input_load_1 = load i4 %input_addr_8" [../src/matmul.cpp:72]   --->   Operation 107 'load' 'input_load_1' <Predicate = (!icmp_ln70_1)> <Delay = 0.79> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+
+State 13 <SV = 5> <Delay = 6.02>
+ST_13 : Operation 108 [1/2] (1.35ns)   --->   "%layer7_weights_load_1 = load i9 %layer7_weights_addr_1" [../src/matmul.cpp:72]   --->   Operation 108 'load' 'layer7_weights_load_1' <Predicate = (!icmp_ln70_1)> <Delay = 1.35> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 320> <ROM>
+ST_13 : Operation 109 [1/2] (0.79ns)   --->   "%input_load_1 = load i4 %input_addr_8" [../src/matmul.cpp:72]   --->   Operation 109 'load' 'input_load_1' <Predicate = (!icmp_ln70_1)> <Delay = 0.79> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_13 : Operation 110 [4/4] (4.67ns)   --->   "%mul4_1 = fmul i32 %layer7_weights_load_1, i32 %input_load_1" [../src/matmul.cpp:72]   --->   Operation 110 'fmul' 'mul4_1' <Predicate = (!icmp_ln70_1)> <Delay = 4.67> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.67> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 6> <Delay = 4.67>
+ST_14 : Operation 111 [3/4] (4.67ns)   --->   "%mul4_1 = fmul i32 %layer7_weights_load_1, i32 %input_load_1" [../src/matmul.cpp:72]   --->   Operation 111 'fmul' 'mul4_1' <Predicate = (!icmp_ln70_1)> <Delay = 4.67> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.67> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 7> <Delay = 4.67>
+ST_15 : Operation 112 [2/4] (4.67ns)   --->   "%mul4_1 = fmul i32 %layer7_weights_load_1, i32 %input_load_1" [../src/matmul.cpp:72]   --->   Operation 112 'fmul' 'mul4_1' <Predicate = (!icmp_ln70_1)> <Delay = 4.67> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.67> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 8> <Delay = 4.67>
+ST_16 : Operation 113 [1/4] (4.67ns)   --->   "%mul4_1 = fmul i32 %layer7_weights_load_1, i32 %input_load_1" [../src/matmul.cpp:72]   --->   Operation 113 'fmul' 'mul4_1' <Predicate = (!icmp_ln70_1)> <Delay = 4.67> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.67> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 9> <Delay = 6.36>
+ST_17 : Operation 114 [1/1] (0.88ns)   --->   "%icmp_ln72_8 = icmp_eq  i4 %add_ln70_1, i4 10" [../src/matmul.cpp:72]   --->   Operation 114 'icmp' 'icmp_ln72_8' <Predicate = (!icmp_ln70_1)> <Delay = 0.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 115 [3/3] (5.48ns)   --->   "%tmp_11 = facc i32 @_ssdm_op_FACC, i32 %mul4_1, i1 %icmp_ln72_8" [../src/matmul.cpp:72]   --->   Operation 115 'facc' 'tmp_11' <Predicate = (!icmp_ln70_1)> <Delay = 5.48> <CoreInst = "FAcc_nodsp">   --->   Core 11 'FAcc_nodsp' <Latency = 2> <II = 1> <Delay = 5.48> <FuncUnit> <Opcode : 'facc'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 10> <Delay = 5.48>
+ST_18 : Operation 116 [2/3] (5.48ns)   --->   "%tmp_11 = facc i32 @_ssdm_op_FACC, i32 %mul4_1, i1 %icmp_ln72_8" [../src/matmul.cpp:72]   --->   Operation 116 'facc' 'tmp_11' <Predicate = (!icmp_ln70_1)> <Delay = 5.48> <CoreInst = "FAcc_nodsp">   --->   Core 11 'FAcc_nodsp' <Latency = 2> <II = 1> <Delay = 5.48> <FuncUnit> <Opcode : 'facc'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 11> <Delay = 5.48>
+ST_19 : Operation 117 [1/1] (0.00ns)   --->   "%specloopname_ln65 = specloopname void @_ssdm_op_SpecLoopName, void @empty" [../src/matmul.cpp:65]   --->   Operation 117 'specloopname' 'specloopname_ln65' <Predicate = (!icmp_ln70_1)> <Delay = 0.00>
+ST_19 : Operation 118 [1/3] (5.48ns)   --->   "%tmp_11 = facc i32 @_ssdm_op_FACC, i32 %mul4_1, i1 %icmp_ln72_8" [../src/matmul.cpp:72]   --->   Operation 118 'facc' 'tmp_11' <Predicate = (!icmp_ln70_1)> <Delay = 5.48> <CoreInst = "FAcc_nodsp">   --->   Core 11 'FAcc_nodsp' <Latency = 2> <II = 1> <Delay = 5.48> <FuncUnit> <Opcode : 'facc'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 119 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 119 'br' 'br_ln0' <Predicate = (!icmp_ln70_1)> <Delay = 0.00>
+
+State 20 <SV = 5> <Delay = 1.35>
+ST_20 : Operation 120 [1/1] (0.00ns)   --->   "%output_addr_9 = getelementptr i32 %output_r, i64 0, i64 %or_ln66_cast10" [../src/matmul.cpp:74]   --->   Operation 120 'getelementptr' 'output_addr_9' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 121 [1/1] (1.35ns)   --->   "%store_ln74 = store i32 %sum_19, i11 %output_addr_9" [../src/matmul.cpp:74]   --->   Operation 121 'store' 'store_ln74' <Predicate = true> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1620> <RAM>
+ST_20 : Operation 122 [1/1] (0.00ns)   --->   "%or_ln66_5 = or i5 %trunc_ln66, i5 2" [../src/matmul.cpp:66]   --->   Operation 122 'or' 'or_ln66_5' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 123 [1/1] (0.00ns)   --->   "%or_ln66_7_cast12 = zext i5 %or_ln66_5" [../src/matmul.cpp:66]   --->   Operation 123 'zext' 'or_ln66_7_cast12' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 124 [1/1] (0.00ns)   --->   "%p_shl4 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i5.i3, i5 %or_ln66_5, i3 0" [../src/matmul.cpp:66]   --->   Operation 124 'bitconcatenate' 'p_shl4' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 125 [1/1] (0.00ns)   --->   "%p_shl4_cast = zext i8 %p_shl4" [../src/matmul.cpp:66]   --->   Operation 125 'zext' 'p_shl4_cast' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 126 [1/1] (0.00ns)   --->   "%p_shl5 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i5.i1, i5 %or_ln66_5, i1 0" [../src/matmul.cpp:66]   --->   Operation 126 'bitconcatenate' 'p_shl5' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 127 [1/1] (0.00ns)   --->   "%zext_ln70_2 = zext i6 %p_shl5" [../src/matmul.cpp:70]   --->   Operation 127 'zext' 'zext_ln70_2' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 128 [1/1] (0.48ns)   --->   "%br_ln70 = br void" [../src/matmul.cpp:70]   --->   Operation 128 'br' 'br_ln70' <Predicate = true> <Delay = 0.48>
+
+State 21 <SV = 6> <Delay = 3.14>
+ST_21 : Operation 129 [1/1] (0.00ns)   --->   "%j_2 = phi i4 %add_ln70_2, void %.split.2, i4 0, void %._crit_edge.loopexit.1" [../src/matmul.cpp:70]   --->   Operation 129 'phi' 'j_2' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 130 [1/1] (0.00ns)   --->   "%sum_2 = phi i32 %tmp_12, void %.split.2, i32 0, void %._crit_edge.loopexit.1" [../src/matmul.cpp:72]   --->   Operation 130 'phi' 'sum_2' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 131 [1/1] (0.86ns)   --->   "%add_ln70_2 = add i4 %j_2, i4 1" [../src/matmul.cpp:70]   --->   Operation 131 'add' 'add_ln70_2' <Predicate = true> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 132 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 132 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 133 [1/1] (0.88ns)   --->   "%icmp_ln70_2 = icmp_eq  i4 %j_2, i4 10" [../src/matmul.cpp:70]   --->   Operation 133 'icmp' 'icmp_ln70_2' <Predicate = true> <Delay = 0.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 134 [1/1] (0.00ns)   --->   "%empty_98 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 10, i64 10, i64 10"   --->   Operation 134 'speclooptripcount' 'empty_98' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 135 [1/1] (0.00ns)   --->   "%br_ln70 = br i1 %icmp_ln70_2, void %.split.2, void %._crit_edge.loopexit.2" [../src/matmul.cpp:70]   --->   Operation 135 'br' 'br_ln70' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 136 [1/1] (0.00ns)   --->   "%j_2_cast13 = zext i4 %j_2" [../src/matmul.cpp:70]   --->   Operation 136 'zext' 'j_2_cast13' <Predicate = (!icmp_ln70_2)> <Delay = 0.00>
+ST_21 : Operation 137 [1/1] (0.00ns)   --->   "%j_2_cast = zext i4 %j_2" [../src/matmul.cpp:70]   --->   Operation 137 'zext' 'j_2_cast' <Predicate = (!icmp_ln70_2)> <Delay = 0.00>
+ST_21 : Operation 138 [1/1] (0.88ns)   --->   "%add_ln72_6 = add i7 %zext_ln70_2, i7 %j_2_cast" [../src/matmul.cpp:72]   --->   Operation 138 'add' 'add_ln72_6' <Predicate = (!icmp_ln70_2)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 139 [1/1] (0.00ns)   --->   "%zext_ln72_10 = zext i7 %add_ln72_6" [../src/matmul.cpp:72]   --->   Operation 139 'zext' 'zext_ln72_10' <Predicate = (!icmp_ln70_2)> <Delay = 0.00>
+ST_21 : Operation 140 [1/1] (0.90ns)   --->   "%add_ln72_7 = add i9 %zext_ln72_10, i9 %p_shl4_cast" [../src/matmul.cpp:72]   --->   Operation 140 'add' 'add_ln72_7' <Predicate = (!icmp_ln70_2)> <Delay = 0.90> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 141 [1/1] (0.00ns)   --->   "%zext_ln72_11 = zext i9 %add_ln72_7" [../src/matmul.cpp:72]   --->   Operation 141 'zext' 'zext_ln72_11' <Predicate = (!icmp_ln70_2)> <Delay = 0.00>
+ST_21 : Operation 142 [1/1] (0.00ns)   --->   "%layer7_weights_addr_2 = getelementptr i32 %layer7_weights, i64 0, i64 %zext_ln72_11" [../src/matmul.cpp:72]   --->   Operation 142 'getelementptr' 'layer7_weights_addr_2' <Predicate = (!icmp_ln70_2)> <Delay = 0.00>
+ST_21 : Operation 143 [2/2] (1.35ns)   --->   "%layer7_weights_load_2 = load i9 %layer7_weights_addr_2" [../src/matmul.cpp:72]   --->   Operation 143 'load' 'layer7_weights_load_2' <Predicate = (!icmp_ln70_2)> <Delay = 1.35> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 320> <ROM>
+ST_21 : Operation 144 [1/1] (0.00ns)   --->   "%input_addr_9 = getelementptr i32 %input_r, i64 0, i64 %j_2_cast13" [../src/matmul.cpp:72]   --->   Operation 144 'getelementptr' 'input_addr_9' <Predicate = (!icmp_ln70_2)> <Delay = 0.00>
+ST_21 : Operation 145 [2/2] (0.79ns)   --->   "%input_load_2 = load i4 %input_addr_9" [../src/matmul.cpp:72]   --->   Operation 145 'load' 'input_load_2' <Predicate = (!icmp_ln70_2)> <Delay = 0.79> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+
+State 22 <SV = 7> <Delay = 6.02>
+ST_22 : Operation 146 [1/2] (1.35ns)   --->   "%layer7_weights_load_2 = load i9 %layer7_weights_addr_2" [../src/matmul.cpp:72]   --->   Operation 146 'load' 'layer7_weights_load_2' <Predicate = (!icmp_ln70_2)> <Delay = 1.35> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 320> <ROM>
+ST_22 : Operation 147 [1/2] (0.79ns)   --->   "%input_load_2 = load i4 %input_addr_9" [../src/matmul.cpp:72]   --->   Operation 147 'load' 'input_load_2' <Predicate = (!icmp_ln70_2)> <Delay = 0.79> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_22 : Operation 148 [4/4] (4.67ns)   --->   "%mul4_2 = fmul i32 %layer7_weights_load_2, i32 %input_load_2" [../src/matmul.cpp:72]   --->   Operation 148 'fmul' 'mul4_2' <Predicate = (!icmp_ln70_2)> <Delay = 4.67> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.67> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 8> <Delay = 4.67>
+ST_23 : Operation 149 [3/4] (4.67ns)   --->   "%mul4_2 = fmul i32 %layer7_weights_load_2, i32 %input_load_2" [../src/matmul.cpp:72]   --->   Operation 149 'fmul' 'mul4_2' <Predicate = (!icmp_ln70_2)> <Delay = 4.67> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.67> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 9> <Delay = 4.67>
+ST_24 : Operation 150 [2/4] (4.67ns)   --->   "%mul4_2 = fmul i32 %layer7_weights_load_2, i32 %input_load_2" [../src/matmul.cpp:72]   --->   Operation 150 'fmul' 'mul4_2' <Predicate = (!icmp_ln70_2)> <Delay = 4.67> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.67> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 10> <Delay = 4.67>
+ST_25 : Operation 151 [1/4] (4.67ns)   --->   "%mul4_2 = fmul i32 %layer7_weights_load_2, i32 %input_load_2" [../src/matmul.cpp:72]   --->   Operation 151 'fmul' 'mul4_2' <Predicate = (!icmp_ln70_2)> <Delay = 4.67> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.67> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 11> <Delay = 6.36>
+ST_26 : Operation 152 [1/1] (0.88ns)   --->   "%icmp_ln72_9 = icmp_eq  i4 %add_ln70_2, i4 10" [../src/matmul.cpp:72]   --->   Operation 152 'icmp' 'icmp_ln72_9' <Predicate = (!icmp_ln70_2)> <Delay = 0.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 153 [3/3] (5.48ns)   --->   "%tmp_12 = facc i32 @_ssdm_op_FACC, i32 %mul4_2, i1 %icmp_ln72_9" [../src/matmul.cpp:72]   --->   Operation 153 'facc' 'tmp_12' <Predicate = (!icmp_ln70_2)> <Delay = 5.48> <CoreInst = "FAcc_nodsp">   --->   Core 11 'FAcc_nodsp' <Latency = 2> <II = 1> <Delay = 5.48> <FuncUnit> <Opcode : 'facc'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 12> <Delay = 5.48>
+ST_27 : Operation 154 [2/3] (5.48ns)   --->   "%tmp_12 = facc i32 @_ssdm_op_FACC, i32 %mul4_2, i1 %icmp_ln72_9" [../src/matmul.cpp:72]   --->   Operation 154 'facc' 'tmp_12' <Predicate = (!icmp_ln70_2)> <Delay = 5.48> <CoreInst = "FAcc_nodsp">   --->   Core 11 'FAcc_nodsp' <Latency = 2> <II = 1> <Delay = 5.48> <FuncUnit> <Opcode : 'facc'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 13> <Delay = 5.48>
+ST_28 : Operation 155 [1/1] (0.00ns)   --->   "%specloopname_ln65 = specloopname void @_ssdm_op_SpecLoopName, void @empty" [../src/matmul.cpp:65]   --->   Operation 155 'specloopname' 'specloopname_ln65' <Predicate = (!icmp_ln70_2)> <Delay = 0.00>
+ST_28 : Operation 156 [1/3] (5.48ns)   --->   "%tmp_12 = facc i32 @_ssdm_op_FACC, i32 %mul4_2, i1 %icmp_ln72_9" [../src/matmul.cpp:72]   --->   Operation 156 'facc' 'tmp_12' <Predicate = (!icmp_ln70_2)> <Delay = 5.48> <CoreInst = "FAcc_nodsp">   --->   Core 11 'FAcc_nodsp' <Latency = 2> <II = 1> <Delay = 5.48> <FuncUnit> <Opcode : 'facc'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 157 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 157 'br' 'br_ln0' <Predicate = (!icmp_ln70_2)> <Delay = 0.00>
+
+State 29 <SV = 7> <Delay = 1.35>
+ST_29 : Operation 158 [1/1] (0.00ns)   --->   "%output_addr_10 = getelementptr i32 %output_r, i64 0, i64 %or_ln66_7_cast12" [../src/matmul.cpp:74]   --->   Operation 158 'getelementptr' 'output_addr_10' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 159 [1/1] (1.35ns)   --->   "%store_ln74 = store i32 %sum_2, i11 %output_addr_10" [../src/matmul.cpp:74]   --->   Operation 159 'store' 'store_ln74' <Predicate = true> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1620> <RAM>
+ST_29 : Operation 160 [1/1] (0.00ns)   --->   "%or_ln66_6 = or i5 %trunc_ln66, i5 3" [../src/matmul.cpp:66]   --->   Operation 160 'or' 'or_ln66_6' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 161 [1/1] (0.00ns)   --->   "%or_ln66_8_cast14 = zext i5 %or_ln66_6" [../src/matmul.cpp:66]   --->   Operation 161 'zext' 'or_ln66_8_cast14' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 162 [1/1] (0.00ns)   --->   "%p_shl6 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i5.i3, i5 %or_ln66_6, i3 0" [../src/matmul.cpp:66]   --->   Operation 162 'bitconcatenate' 'p_shl6' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 163 [1/1] (0.00ns)   --->   "%p_shl6_cast = zext i8 %p_shl6" [../src/matmul.cpp:66]   --->   Operation 163 'zext' 'p_shl6_cast' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 164 [1/1] (0.00ns)   --->   "%p_shl7 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i5.i1, i5 %or_ln66_6, i1 0" [../src/matmul.cpp:66]   --->   Operation 164 'bitconcatenate' 'p_shl7' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 165 [1/1] (0.00ns)   --->   "%zext_ln70_3 = zext i6 %p_shl7" [../src/matmul.cpp:70]   --->   Operation 165 'zext' 'zext_ln70_3' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 166 [1/1] (0.48ns)   --->   "%br_ln70 = br void" [../src/matmul.cpp:70]   --->   Operation 166 'br' 'br_ln70' <Predicate = true> <Delay = 0.48>
+
+State 30 <SV = 8> <Delay = 3.14>
+ST_30 : Operation 167 [1/1] (0.00ns)   --->   "%j_3 = phi i4 %add_ln70_3, void %.split.3, i4 0, void %._crit_edge.loopexit.2" [../src/matmul.cpp:70]   --->   Operation 167 'phi' 'j_3' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 168 [1/1] (0.00ns)   --->   "%sum_3 = phi i32 %tmp_13, void %.split.3, i32 0, void %._crit_edge.loopexit.2" [../src/matmul.cpp:72]   --->   Operation 168 'phi' 'sum_3' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 169 [1/1] (0.86ns)   --->   "%add_ln70_3 = add i4 %j_3, i4 1" [../src/matmul.cpp:70]   --->   Operation 169 'add' 'add_ln70_3' <Predicate = true> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 170 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 170 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 171 [1/1] (0.88ns)   --->   "%icmp_ln70_3 = icmp_eq  i4 %j_3, i4 10" [../src/matmul.cpp:70]   --->   Operation 171 'icmp' 'icmp_ln70_3' <Predicate = true> <Delay = 0.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 172 [1/1] (0.00ns)   --->   "%empty_99 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 10, i64 10, i64 10"   --->   Operation 172 'speclooptripcount' 'empty_99' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 173 [1/1] (0.00ns)   --->   "%br_ln70 = br i1 %icmp_ln70_3, void %.split.3, void %._crit_edge.loopexit.3" [../src/matmul.cpp:70]   --->   Operation 173 'br' 'br_ln70' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 174 [1/1] (0.00ns)   --->   "%j_3_cast15 = zext i4 %j_3" [../src/matmul.cpp:70]   --->   Operation 174 'zext' 'j_3_cast15' <Predicate = (!icmp_ln70_3)> <Delay = 0.00>
+ST_30 : Operation 175 [1/1] (0.00ns)   --->   "%j_3_cast = zext i4 %j_3" [../src/matmul.cpp:70]   --->   Operation 175 'zext' 'j_3_cast' <Predicate = (!icmp_ln70_3)> <Delay = 0.00>
+ST_30 : Operation 176 [1/1] (0.88ns)   --->   "%add_ln72_8 = add i7 %zext_ln70_3, i7 %j_3_cast" [../src/matmul.cpp:72]   --->   Operation 176 'add' 'add_ln72_8' <Predicate = (!icmp_ln70_3)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 177 [1/1] (0.00ns)   --->   "%zext_ln72_12 = zext i7 %add_ln72_8" [../src/matmul.cpp:72]   --->   Operation 177 'zext' 'zext_ln72_12' <Predicate = (!icmp_ln70_3)> <Delay = 0.00>
+ST_30 : Operation 178 [1/1] (0.90ns)   --->   "%add_ln72_9 = add i9 %zext_ln72_12, i9 %p_shl6_cast" [../src/matmul.cpp:72]   --->   Operation 178 'add' 'add_ln72_9' <Predicate = (!icmp_ln70_3)> <Delay = 0.90> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 179 [1/1] (0.00ns)   --->   "%zext_ln72_13 = zext i9 %add_ln72_9" [../src/matmul.cpp:72]   --->   Operation 179 'zext' 'zext_ln72_13' <Predicate = (!icmp_ln70_3)> <Delay = 0.00>
+ST_30 : Operation 180 [1/1] (0.00ns)   --->   "%layer7_weights_addr_3 = getelementptr i32 %layer7_weights, i64 0, i64 %zext_ln72_13" [../src/matmul.cpp:72]   --->   Operation 180 'getelementptr' 'layer7_weights_addr_3' <Predicate = (!icmp_ln70_3)> <Delay = 0.00>
+ST_30 : Operation 181 [2/2] (1.35ns)   --->   "%layer7_weights_load_3 = load i9 %layer7_weights_addr_3" [../src/matmul.cpp:72]   --->   Operation 181 'load' 'layer7_weights_load_3' <Predicate = (!icmp_ln70_3)> <Delay = 1.35> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 320> <ROM>
+ST_30 : Operation 182 [1/1] (0.00ns)   --->   "%input_addr_10 = getelementptr i32 %input_r, i64 0, i64 %j_3_cast15" [../src/matmul.cpp:72]   --->   Operation 182 'getelementptr' 'input_addr_10' <Predicate = (!icmp_ln70_3)> <Delay = 0.00>
+ST_30 : Operation 183 [2/2] (0.79ns)   --->   "%input_load_3 = load i4 %input_addr_10" [../src/matmul.cpp:72]   --->   Operation 183 'load' 'input_load_3' <Predicate = (!icmp_ln70_3)> <Delay = 0.79> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+
+State 31 <SV = 9> <Delay = 6.02>
+ST_31 : Operation 184 [1/2] (1.35ns)   --->   "%layer7_weights_load_3 = load i9 %layer7_weights_addr_3" [../src/matmul.cpp:72]   --->   Operation 184 'load' 'layer7_weights_load_3' <Predicate = (!icmp_ln70_3)> <Delay = 1.35> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 320> <ROM>
+ST_31 : Operation 185 [1/2] (0.79ns)   --->   "%input_load_3 = load i4 %input_addr_10" [../src/matmul.cpp:72]   --->   Operation 185 'load' 'input_load_3' <Predicate = (!icmp_ln70_3)> <Delay = 0.79> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_31 : Operation 186 [4/4] (4.67ns)   --->   "%mul4_3 = fmul i32 %layer7_weights_load_3, i32 %input_load_3" [../src/matmul.cpp:72]   --->   Operation 186 'fmul' 'mul4_3' <Predicate = (!icmp_ln70_3)> <Delay = 4.67> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.67> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 10> <Delay = 4.67>
+ST_32 : Operation 187 [3/4] (4.67ns)   --->   "%mul4_3 = fmul i32 %layer7_weights_load_3, i32 %input_load_3" [../src/matmul.cpp:72]   --->   Operation 187 'fmul' 'mul4_3' <Predicate = (!icmp_ln70_3)> <Delay = 4.67> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.67> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 11> <Delay = 4.67>
+ST_33 : Operation 188 [2/4] (4.67ns)   --->   "%mul4_3 = fmul i32 %layer7_weights_load_3, i32 %input_load_3" [../src/matmul.cpp:72]   --->   Operation 188 'fmul' 'mul4_3' <Predicate = (!icmp_ln70_3)> <Delay = 4.67> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.67> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 12> <Delay = 4.67>
+ST_34 : Operation 189 [1/4] (4.67ns)   --->   "%mul4_3 = fmul i32 %layer7_weights_load_3, i32 %input_load_3" [../src/matmul.cpp:72]   --->   Operation 189 'fmul' 'mul4_3' <Predicate = (!icmp_ln70_3)> <Delay = 4.67> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 4.67> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 13> <Delay = 6.36>
+ST_35 : Operation 190 [1/1] (0.88ns)   --->   "%icmp_ln72_10 = icmp_eq  i4 %add_ln70_3, i4 10" [../src/matmul.cpp:72]   --->   Operation 190 'icmp' 'icmp_ln72_10' <Predicate = (!icmp_ln70_3)> <Delay = 0.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 191 [3/3] (5.48ns)   --->   "%tmp_13 = facc i32 @_ssdm_op_FACC, i32 %mul4_3, i1 %icmp_ln72_10" [../src/matmul.cpp:72]   --->   Operation 191 'facc' 'tmp_13' <Predicate = (!icmp_ln70_3)> <Delay = 5.48> <CoreInst = "FAcc_nodsp">   --->   Core 11 'FAcc_nodsp' <Latency = 2> <II = 1> <Delay = 5.48> <FuncUnit> <Opcode : 'facc'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 14> <Delay = 5.48>
+ST_36 : Operation 192 [2/3] (5.48ns)   --->   "%tmp_13 = facc i32 @_ssdm_op_FACC, i32 %mul4_3, i1 %icmp_ln72_10" [../src/matmul.cpp:72]   --->   Operation 192 'facc' 'tmp_13' <Predicate = (!icmp_ln70_3)> <Delay = 5.48> <CoreInst = "FAcc_nodsp">   --->   Core 11 'FAcc_nodsp' <Latency = 2> <II = 1> <Delay = 5.48> <FuncUnit> <Opcode : 'facc'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 15> <Delay = 5.48>
+ST_37 : Operation 193 [1/1] (0.00ns)   --->   "%specloopname_ln65 = specloopname void @_ssdm_op_SpecLoopName, void @empty" [../src/matmul.cpp:65]   --->   Operation 193 'specloopname' 'specloopname_ln65' <Predicate = (!icmp_ln70_3)> <Delay = 0.00>
+ST_37 : Operation 194 [1/3] (5.48ns)   --->   "%tmp_13 = facc i32 @_ssdm_op_FACC, i32 %mul4_3, i1 %icmp_ln72_10" [../src/matmul.cpp:72]   --->   Operation 194 'facc' 'tmp_13' <Predicate = (!icmp_ln70_3)> <Delay = 5.48> <CoreInst = "FAcc_nodsp">   --->   Core 11 'FAcc_nodsp' <Latency = 2> <II = 1> <Delay = 5.48> <FuncUnit> <Opcode : 'facc'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 195 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 195 'br' 'br_ln0' <Predicate = (!icmp_ln70_3)> <Delay = 0.00>
+
+State 38 <SV = 9> <Delay = 1.35>
+ST_38 : Operation 196 [1/1] (0.88ns)   --->   "%add_ln66 = add i6 %i_0, i6 4" [../src/matmul.cpp:66]   --->   Operation 196 'add' 'add_ln66' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 197 [1/1] (0.00ns)   --->   "%output_addr_11 = getelementptr i32 %output_r, i64 0, i64 %or_ln66_8_cast14" [../src/matmul.cpp:74]   --->   Operation 197 'getelementptr' 'output_addr_11' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 198 [1/1] (1.35ns)   --->   "%store_ln74 = store i32 %sum_3, i11 %output_addr_11" [../src/matmul.cpp:74]   --->   Operation 198 'store' 'store_ln74' <Predicate = true> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1620> <RAM>
+ST_38 : Operation 199 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 199 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0.489ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i_0', ../src/matmul.cpp:66) with incoming values : ('add_ln66', ../src/matmul.cpp:66) [7]  (0.489 ns)
+
+ <State 2>: 0.87ns
+The critical path consists of the following:
+	'phi' operation ('i_0', ../src/matmul.cpp:66) with incoming values : ('add_ln66', ../src/matmul.cpp:66) [7]  (0 ns)
+	'icmp' operation ('icmp_ln66', ../src/matmul.cpp:66) [8]  (0.87 ns)
+
+ <State 3>: 3.15ns
+The critical path consists of the following:
+	'phi' operation ('j_0', ../src/matmul.cpp:70) with incoming values : ('add_ln70', ../src/matmul.cpp:70) [21]  (0 ns)
+	'add' operation ('add_ln72_3', ../src/matmul.cpp:72) [32]  (0.887 ns)
+	'add' operation ('add_ln72', ../src/matmul.cpp:72) [34]  (0.907 ns)
+	'getelementptr' operation ('layer7_weights_addr', ../src/matmul.cpp:72) [36]  (0 ns)
+	'load' operation ('layer7_weights_load', ../src/matmul.cpp:72) on array 'layer7_weights' [37]  (1.35 ns)
+
+ <State 4>: 6.02ns
+The critical path consists of the following:
+	'load' operation ('layer7_weights_load', ../src/matmul.cpp:72) on array 'layer7_weights' [37]  (1.35 ns)
+	'fmul' operation ('mul4', ../src/matmul.cpp:72) [40]  (4.67 ns)
+
+ <State 5>: 4.67ns
+The critical path consists of the following:
+	'fmul' operation ('mul4', ../src/matmul.cpp:72) [40]  (4.67 ns)
+
+ <State 6>: 4.67ns
+The critical path consists of the following:
+	'fmul' operation ('mul4', ../src/matmul.cpp:72) [40]  (4.67 ns)
+
+ <State 7>: 4.67ns
+The critical path consists of the following:
+	'fmul' operation ('mul4', ../src/matmul.cpp:72) [40]  (4.67 ns)
+
+ <State 8>: 6.37ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln72', ../src/matmul.cpp:72) [41]  (0.884 ns)
+	'facc' operation ('tmp', ../src/matmul.cpp:72) [42]  (5.48 ns)
+
+ <State 9>: 5.48ns
+The critical path consists of the following:
+	'facc' operation ('tmp', ../src/matmul.cpp:72) [42]  (5.48 ns)
+
+ <State 10>: 5.48ns
+The critical path consists of the following:
+	'facc' operation ('tmp', ../src/matmul.cpp:72) [42]  (5.48 ns)
+
+ <State 11>: 1.35ns
+The critical path consists of the following:
+	'getelementptr' operation ('output_addr', ../src/matmul.cpp:74) [45]  (0 ns)
+	'store' operation ('store_ln74', ../src/matmul.cpp:74) of variable 'sum_0', ../src/matmul.cpp:72 on array 'output_r' [46]  (1.35 ns)
+
+ <State 12>: 3.15ns
+The critical path consists of the following:
+	'phi' operation ('j_1', ../src/matmul.cpp:70) with incoming values : ('add_ln70_1', ../src/matmul.cpp:70) [55]  (0 ns)
+	'add' operation ('add_ln72_4', ../src/matmul.cpp:72) [66]  (0.887 ns)
+	'add' operation ('add_ln72_5', ../src/matmul.cpp:72) [68]  (0.907 ns)
+	'getelementptr' operation ('layer7_weights_addr_1', ../src/matmul.cpp:72) [70]  (0 ns)
+	'load' operation ('layer7_weights_load_1', ../src/matmul.cpp:72) on array 'layer7_weights' [71]  (1.35 ns)
+
+ <State 13>: 6.02ns
+The critical path consists of the following:
+	'load' operation ('layer7_weights_load_1', ../src/matmul.cpp:72) on array 'layer7_weights' [71]  (1.35 ns)
+	'fmul' operation ('mul4_1', ../src/matmul.cpp:72) [74]  (4.67 ns)
+
+ <State 14>: 4.67ns
+The critical path consists of the following:
+	'fmul' operation ('mul4_1', ../src/matmul.cpp:72) [74]  (4.67 ns)
+
+ <State 15>: 4.67ns
+The critical path consists of the following:
+	'fmul' operation ('mul4_1', ../src/matmul.cpp:72) [74]  (4.67 ns)
+
+ <State 16>: 4.67ns
+The critical path consists of the following:
+	'fmul' operation ('mul4_1', ../src/matmul.cpp:72) [74]  (4.67 ns)
+
+ <State 17>: 6.37ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln72_8', ../src/matmul.cpp:72) [75]  (0.884 ns)
+	'facc' operation ('tmp_11', ../src/matmul.cpp:72) [76]  (5.48 ns)
+
+ <State 18>: 5.48ns
+The critical path consists of the following:
+	'facc' operation ('tmp_11', ../src/matmul.cpp:72) [76]  (5.48 ns)
+
+ <State 19>: 5.48ns
+The critical path consists of the following:
+	'facc' operation ('tmp_11', ../src/matmul.cpp:72) [76]  (5.48 ns)
+
+ <State 20>: 1.35ns
+The critical path consists of the following:
+	'getelementptr' operation ('output_addr_9', ../src/matmul.cpp:74) [79]  (0 ns)
+	'store' operation ('store_ln74', ../src/matmul.cpp:74) of variable 'sum_19', ../src/matmul.cpp:72 on array 'output_r' [80]  (1.35 ns)
+
+ <State 21>: 3.15ns
+The critical path consists of the following:
+	'phi' operation ('j_2', ../src/matmul.cpp:70) with incoming values : ('add_ln70_2', ../src/matmul.cpp:70) [89]  (0 ns)
+	'add' operation ('add_ln72_6', ../src/matmul.cpp:72) [100]  (0.887 ns)
+	'add' operation ('add_ln72_7', ../src/matmul.cpp:72) [102]  (0.907 ns)
+	'getelementptr' operation ('layer7_weights_addr_2', ../src/matmul.cpp:72) [104]  (0 ns)
+	'load' operation ('layer7_weights_load_2', ../src/matmul.cpp:72) on array 'layer7_weights' [105]  (1.35 ns)
+
+ <State 22>: 6.02ns
+The critical path consists of the following:
+	'load' operation ('layer7_weights_load_2', ../src/matmul.cpp:72) on array 'layer7_weights' [105]  (1.35 ns)
+	'fmul' operation ('mul4_2', ../src/matmul.cpp:72) [108]  (4.67 ns)
+
+ <State 23>: 4.67ns
+The critical path consists of the following:
+	'fmul' operation ('mul4_2', ../src/matmul.cpp:72) [108]  (4.67 ns)
+
+ <State 24>: 4.67ns
+The critical path consists of the following:
+	'fmul' operation ('mul4_2', ../src/matmul.cpp:72) [108]  (4.67 ns)
+
+ <State 25>: 4.67ns
+The critical path consists of the following:
+	'fmul' operation ('mul4_2', ../src/matmul.cpp:72) [108]  (4.67 ns)
+
+ <State 26>: 6.37ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln72_9', ../src/matmul.cpp:72) [109]  (0.884 ns)
+	'facc' operation ('tmp_12', ../src/matmul.cpp:72) [110]  (5.48 ns)
+
+ <State 27>: 5.48ns
+The critical path consists of the following:
+	'facc' operation ('tmp_12', ../src/matmul.cpp:72) [110]  (5.48 ns)
+
+ <State 28>: 5.48ns
+The critical path consists of the following:
+	'facc' operation ('tmp_12', ../src/matmul.cpp:72) [110]  (5.48 ns)
+
+ <State 29>: 1.35ns
+The critical path consists of the following:
+	'getelementptr' operation ('output_addr_10', ../src/matmul.cpp:74) [113]  (0 ns)
+	'store' operation ('store_ln74', ../src/matmul.cpp:74) of variable 'sum_2', ../src/matmul.cpp:72 on array 'output_r' [114]  (1.35 ns)
+
+ <State 30>: 3.15ns
+The critical path consists of the following:
+	'phi' operation ('j_3', ../src/matmul.cpp:70) with incoming values : ('add_ln70_3', ../src/matmul.cpp:70) [123]  (0 ns)
+	'add' operation ('add_ln72_8', ../src/matmul.cpp:72) [134]  (0.887 ns)
+	'add' operation ('add_ln72_9', ../src/matmul.cpp:72) [136]  (0.907 ns)
+	'getelementptr' operation ('layer7_weights_addr_3', ../src/matmul.cpp:72) [138]  (0 ns)
+	'load' operation ('layer7_weights_load_3', ../src/matmul.cpp:72) on array 'layer7_weights' [139]  (1.35 ns)
+
+ <State 31>: 6.02ns
+The critical path consists of the following:
+	'load' operation ('layer7_weights_load_3', ../src/matmul.cpp:72) on array 'layer7_weights' [139]  (1.35 ns)
+	'fmul' operation ('mul4_3', ../src/matmul.cpp:72) [142]  (4.67 ns)
+
+ <State 32>: 4.67ns
+The critical path consists of the following:
+	'fmul' operation ('mul4_3', ../src/matmul.cpp:72) [142]  (4.67 ns)
+
+ <State 33>: 4.67ns
+The critical path consists of the following:
+	'fmul' operation ('mul4_3', ../src/matmul.cpp:72) [142]  (4.67 ns)
+
+ <State 34>: 4.67ns
+The critical path consists of the following:
+	'fmul' operation ('mul4_3', ../src/matmul.cpp:72) [142]  (4.67 ns)
+
+ <State 35>: 6.37ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln72_10', ../src/matmul.cpp:72) [143]  (0.884 ns)
+	'facc' operation ('tmp_13', ../src/matmul.cpp:72) [144]  (5.48 ns)
+
+ <State 36>: 5.48ns
+The critical path consists of the following:
+	'facc' operation ('tmp_13', ../src/matmul.cpp:72) [144]  (5.48 ns)
+
+ <State 37>: 5.48ns
+The critical path consists of the following:
+	'facc' operation ('tmp_13', ../src/matmul.cpp:72) [144]  (5.48 ns)
+
+ <State 38>: 1.35ns
+The critical path consists of the following:
+	'getelementptr' operation ('output_addr_11', ../src/matmul.cpp:74) [148]  (0 ns)
+	'store' operation ('store_ln74', ../src/matmul.cpp:74) of variable 'sum_3', ../src/matmul.cpp:72 on array 'output_r' [149]  (1.35 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
